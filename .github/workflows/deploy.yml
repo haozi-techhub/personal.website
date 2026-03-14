@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    # 添加权限设置
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          lfs: true  # 启用Git LFS支持
+          fetch-depth: 0  # 获取完整历史以确保LFS文件正确处理
+
+      # 添加图片压缩步骤（可选）
+      # - name: Compress Images
+      #   uses: calibreapp/image-actions@main
+      #   with:
+      #     compressOnly: true
+      
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # The folder the action should deploy.
+          branch: gh-pages # The branch the action should deploy to.
+          clean: true # 自动清理旧文件
+          silent: false # 显示详细日志以便调试
+          ssh-key: ${{ secrets.DEPLOY_KEY }} # 使用部署密钥进行身份验证
+          # token: ${{ secrets.GITHUB_TOKEN }} # 使用GitHub提供的令牌进行身份验证
