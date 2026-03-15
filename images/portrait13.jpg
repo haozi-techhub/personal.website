@@ -1,6 +1,0 @@
-<!-- 这是一个SVG占位图，用于替代缺失的portrait13.jpg -->
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
-  <rect width="100%" height="100%" fill="#f0f0f0"/>
-  <text x="50%" y="50%" font-family="Arial" font-size="24" text-anchor="middle" fill="#666">暗光下的思绪</text>
-  <text x="50%" y="55%" font-family="Arial" font-size="18" text-anchor="middle" fill="#999">Portrait Image</text>
-</svg>
