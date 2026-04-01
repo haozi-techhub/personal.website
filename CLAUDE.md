@@ -4,38 +4,35 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is a static personal website built with plain HTML, CSS, and JavaScript. No build system, bundler, or test framework is used.
+Static personal website built with plain HTML, CSS, and JavaScript. No build system, bundler, or test framework.
 
 ## Development
 
-Open `index.html` directly in a browser to preview changes.
+Open `index.html` directly in a browser to preview changes. No build step required.
 
 ## Deployment
 
-The site deploys automatically to GitHub Pages via GitHub Actions on push to `main`.
-
-- **Deploy action**: `.github/workflows/deploy.yml`
-- **Deploy branch**: `gh-pages`
-- **Deployment method**: SSH deploy key (configured via `secrets.DEPLOY_KEY`)
-
-### Manual Deploy
-
-```bash
-git push origin main
-```
-
-GitHub Actions handles the rest automatically.
+Push to `main` triggers automatic deployment to GitHub Pages via `.github/workflows/deploy.yml`. The workflow uses an SSH deploy key (`secrets.DEPLOY_KEY`) to push to the `gh-pages` branch.
 
 ## Architecture
 
-- **Root level**: HTML pages (`index.html`, `resume.html`, `photos.html`, etc.)
-- **`styles/`**: CSS files for styling
-- **`js/`**: JavaScript files
-- **`未命名/`**: Duplicate/backup copy - do not modify
+- **Root level**: HTML pages
+  - `index.html` - homepage
+  - `resume.html` - resume/CV
+  - `photos.html` - photography gallery hub; sub-pages: `photos-autumn.html`, `photos-suipai.html`, `photos-xinjiang.html`, `photos-landscape.html`, `photos-life.html`, `photos-portrait.html`, `photos-street.html`, `photos-travel.html`
+  - `agents.html` - AI agents projects
+  - `projects.html` - personal projects
+- **`styles/`**: Per-page CSS files (e.g., `projects.css` for projects.html)
+- **`js/`**: JavaScript utilities
+- **`未命名/`**: Backup/duplicate content - do not modify
+
+## Style Modification Constraints
+
+**`projects.html`** -不得修改现有风格，只能在原有基础上增加或调整样式。
 
 ## Git LFS
 
-Large binary files (images) are tracked with Git LFS. After cloning:
+Images are tracked with Git LFS. After cloning:
 ```bash
 git lfs install
 git lfs pull
@@ -43,5 +40,10 @@ git lfs pull
 
 ## Key Files
 
-- `CNAME` - Custom domain configuration for GitHub Pages
-- `.nojekyll` - Required for GitHub Pages to process this as a static site
+- `CNAME` - Custom domain for GitHub Pages
+- `.nojekyll` - Required for GitHub Pages processing
+- `.claude/` - Contains memory system for project-specific guidance
+
+## Memory System
+
+The `.claude/projects/` directory contains persistent memory files. Check this for project-specific constraints (e.g., style modification rules for certain pages).
