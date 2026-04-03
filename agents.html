@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的智能体 | 任文浩的个人主页</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles/background.css">
-    <link rel="stylesheet" href="styles/agents.css">
-    <link rel="stylesheet" href="styles/animation-background.css">
+    <link rel="stylesheet" href="assets/css/background.css">
+    <link rel="stylesheet" href="assets/css/agents.css">
+    <link rel="stylesheet" href="assets/css/animation-background.css">
 </head>
 <body>
     <div class="page-container">
@@ -21,7 +21,33 @@
             <nav>
                 <ul>
                     <li><a href="index.html">主页 | Home</a></li>
-                    <li><a href="https://www.baidu.com/" target="_blank">小红书 | Red</a></li>
+                    <li class="nav-dropdown">
+                            <a href="#" class="dropdown-trigger" onclick="return false;">
+                                自媒体 | Self-media <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="https://www.baidu.com/" class="dropdown-item" target="_blank">
+                                    <span class="dropdown-icon"><i class="fas fa-book"></i></span>
+                                    小红书
+                                </a>
+                                <a href="#" class="dropdown-item" target="_blank">
+                                    <span class="dropdown-icon"><i class="fas fa-video"></i></span>
+                                    抖音
+                                </a>
+                                <a href="#" class="dropdown-item" target="_blank">
+                                    <span class="dropdown-icon"><i class="fas fa-pen-fancy"></i></span>
+                                    人人都是产品经理
+                                </a>
+                                <a href="#" class="dropdown-item" target="_blank">
+                                    <span class="dropdown-icon"><i class="fas fa-comment-dots"></i></span>
+                                    微信公众号
+                                </a>
+                                <a href="#" class="dropdown-item" target="_blank">
+                                    <span class="dropdown-icon"><i class="fas fa-star"></i></span>
+                                    少数派
+                                </a>
+                            </div>
+                        </li>
                     <li><a href="photos.html">摄影 | Photographs</a></li>
                     <li><a href="projects.html" class="projects-link">Projects <i class="fas fa-rocket"></i></a></li>
                     <li><a href="agents.html" class="agent-link active">Agent <i class="fas fa-robot"></i></a></li>
@@ -34,7 +60,7 @@
                 <h1>MY AGENTS</h1>
                 <p>探索我创建的各种智能体，它们可以帮助你完成不同的任务</p>
             </div>
-            
+
             <div class="agents-grid">
                 <!-- 智能体卡片1：小红书文案生成智能体 -->
                 <div class="agent-card">
@@ -111,6 +137,6 @@
         </main>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

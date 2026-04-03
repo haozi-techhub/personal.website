@@ -4,13 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>摄影作品 | 任文浩的个人主页</title>
-        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
-        <link rel="stylesheet" href="styles/background.css" />
-        <link rel="stylesheet" href="styles/photography.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/background.css" />
+        <link rel="stylesheet" href="assets/css/photography.css" />
     </head>
     <body>
         <div class="page-container">
@@ -23,13 +29,78 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">主页 | Home</a></li>
+                        <li class="nav-dropdown">
+                            <a
+                                href="#"
+                                class="dropdown-trigger"
+                                onclick="return false;"
+                            >
+                                自媒体 | Self-media
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a
+                                    href="https://www.baidu.com/"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-book"></i
+                                    ></span>
+                                    小红书
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-video"></i
+                                    ></span>
+                                    抖音
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-pen-fancy"></i
+                                    ></span>
+                                    人人都是产品经理
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-comment-dots"></i
+                                    ></span>
+                                    微信公众号
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-star"></i
+                                    ></span>
+                                    少数派
+                                </a>
+                            </div>
+                        </li>
                         <li>
-                            <a href="https://www.baidu.com/" target="_blank"
-                                >小红书 | Red</a
+                            <a href="photos.html" class="active"
+                                >摄影 | Photographs</a
                             >
                         </li>
-                        <li><a href="photos.html">摄影 | Photographs</a></li>
-                        <li><a href="projects.html" class="projects-link">Projects <i class="fas fa-rocket"></i></a></li>
+                        <li>
+                            <a href="projects.html" class="projects-link"
+                                >Projects <i class="fas fa-rocket"></i
+                            ></a>
+                        </li>
                         <li>
                             <a href="agents.html" class="agent-link"
                                 >Agent <i class="fas fa-robot"></i
@@ -39,234 +110,473 @@
                 </nav>
             </header>
 
-            <main class="photo-gallery-container">
-                <div class="gallery-header">
-                    <h1>PHOTOGRAPHY</h1>
-                    <p>
-                        以光影为笔，情感为墨，定格世界的瞬息万变，讲述心灵深处的无声故事
-                    </p>
-                </div>
-
-                <!-- 主题分类区域 - 修复结构并优化样式 -->
-                <div class="photo-themes">
-                    <!-- 风景摄影 -->
-                    <div
-                        class="theme-item"
-                        onclick="location.href = 'photos-landscape.html'"
-                    >
-                        <div class="theme-image">
-                            <img
-                                src="https://images.pexels.com/photos/31447439/pexels-photo-31447439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="风景摄影"
-                            />
-                            <div class="theme-overlay"></div>
-                        </div>
-                        <div class="theme-info">
-                            <h3>风景摄影</h3>
-                            <p>
-                                捕捉自然的壮丽与静谧，用光影描绘山川湖海的无限魅力
-                            </p>
-                            <span class="theme-link"
-                                >查看作品 <i class="fas fa-arrow-right"></i
-                            ></span>
-                        </div>
+            <main class="cinematic-gallery">
+                <!-- Hero Section -->
+                <section class="gallery-hero cinematic-block">
+                    <div class="hero-bg"></div>
+                    <div class="hero-content">
+                        <h1>PHOTOGRAPHY</h1>
+                        <p class="hero-subtitle">
+                            以光影为笔，情感为墨，定格世界的瞬息万变，讲述心灵深处的无声故事
+                        </p>
                     </div>
+                </section>
 
-                    <!-- 人像摄影 -->
-                    <div
-                        class="theme-item"
-                        onclick="location.href = 'photos-portrait.html'"
-                    >
-                        <div class="theme-image">
-                            <img
-                                src="https://images.pexels.com/photos/31447816/pexels-photo-31447816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="人像摄影"
-                            />
-                            <div class="theme-overlay"></div>
-                        </div>
-                        <div class="theme-info">
-                            <h3>人像摄影</h3>
-                            <p>
-                                定格真实情感与独特气质，每一帧都是内心世界的生动表达
-                            </p>
-                            <span class="theme-link"
-                                >查看作品 <i class="fas fa-arrow-right"></i
-                            ></span>
-                        </div>
+                <!-- Category 01: Landscape -->
+                <section
+                    class="category-block"
+                    data-category="landscape"
+                    onclick="location.href = 'photos/landscape.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/31447439/pexels-photo-31447439.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="风景摄影"
+                            loading="lazy"
+                        />
                     </div>
-
-                    <!-- 街头摄影 -->
-                    <div
-                        class="theme-item"
-                        onclick="location.href = 'photos-street.html'"
-                    >
-                        <div class="theme-image">
-                            <img
-                                src="https://images.pexels.com/photos/31447524/pexels-photo-31447524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="街头摄影"
-                            />
-                            <div class="theme-overlay"></div>
-                        </div>
-                        <div class="theme-info">
-                            <h3>街头摄影</h3>
-                            <p>
-                                在城市脉搏中捕捉真实与偶然，记录都市生活的点滴故事与温度
-                            </p>
-                            <span class="theme-link"
-                                >查看作品 <i class="fas fa-arrow-right"></i
-                            ></span>
-                        </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">01</span>
+                        <h2 class="category-title">Landscape</h2>
+                        <p class="category-desc">
+                            捕捉自然的壮丽与静谧，在广袤天地间寻找心灵的慰藉
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
                     </div>
+                </section>
 
-                    <!-- 旅行摄影 -->
-                    <div
-                        class="theme-item"
-                        onclick="location.href = 'photos-travel.html'"
-                    >
-                        <div class="theme-image">
-                            <img
-                                src="https://images.pexels.com/photos/31447535/pexels-photo-31447535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="旅行摄影"
-                            />
-                            <div class="theme-overlay"></div>
-                        </div>
-                        <div class="theme-info">
-                            <h3>旅行摄影</h3>
-                            <p>
-                                足迹所至，镜头所向，用独特视角记录异域风情与文化灵魂
-                            </p>
-                            <span class="theme-link"
-                                >查看作品 <i class="fas fa-arrow-right"></i
-                            ></span>
-                        </div>
+                <!-- Category 02: Portrait -->
+                <section
+                    class="category-block"
+                    data-category="portrait"
+                    onclick="location.href = 'photos/portrait.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/31447816/pexels-photo-31447816.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="人像摄影"
+                            loading="lazy"
+                        />
                     </div>
-                </div>
-
-                <!-- 添加第二行主题分类 -->
-                <div class="photo-themes second-row">
-                    <!-- 生活纪实 -->
-                    <div
-                        class="theme-item"
-                        onclick="location.href = 'photos-life.html'"
-                    >
-                        <div class="theme-image">
-                            <img
-                                src="https://images.pexels.com/photos/31459363/pexels-photo-31459363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="生活纪实"
-                            />
-                            <div class="theme-overlay"></div>
-                        </div>
-                        <div class="theme-info">
-                            <h3>生活纪实</h3>
-                            <p>
-                                聚焦日常的细腻瞬间，发现平凡生活中的诗意与温暖力量
-                            </p>
-                            <span class="theme-link"
-                                >查看作品 <i class="fas fa-arrow-right"></i
-                            ></span>
-                        </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">02</span>
+                        <h2 class="category-title">Portrait</h2>
+                        <p class="category-desc">
+                            定格真实情感与独特气质，诠释人物内心的细腻世界
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
                     </div>
+                </section>
 
-                    <!-- 新疆摄影 -->
-                    <div
-                        class="theme-item"
-                        onclick="location.href = 'photos-xinjiang.html'"
-                    >
-                        <div class="theme-image">
-                            <img
-                                src="https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="新疆摄影"
-                            />
-                            <div class="theme-overlay"></div>
-                        </div>
-                        <div class="theme-info">
-                            <h3>新疆摄影</h3>
-                            <p>
-                                记录西域的壮美风光与独特人文，感受大漠与雪山的壮阔
-                            </p>
-                            <span class="theme-link"
-                                >查看作品 <i class="fas fa-arrow-right"></i
-                            ></span>
-                        </div>
+                <!-- Category 03: Street -->
+                <section
+                    class="category-block"
+                    data-category="street"
+                    onclick="location.href = 'photos/street.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/31447524/pexels-photo-31447524.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="街头摄影"
+                            loading="lazy"
+                        />
                     </div>
-
-                    <!-- 随拍摄影 -->
-                    <div
-                        class="theme-item"
-                        onclick="location.href = 'photos-suipai.html'"
-                    >
-                        <div class="theme-image">
-                            <img
-                                src="https://images.pexels.com/photos/1223649/pexels-photo-1223649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="随拍摄影"
-                            />
-                            <div class="theme-overlay"></div>
-                        </div>
-                        <div class="theme-info">
-                            <h3>随拍摄影</h3>
-                            <p>
-                                捕捉生活中的不经意瞬间，发现日常里的美好与诗意
-                            </p>
-                            <span class="theme-link"
-                                >查看作品 <i class="fas fa-arrow-right"></i
-                            ></span>
-                        </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">03</span>
+                        <h2 class="category-title">Street</h2>
+                        <p class="category-desc">
+                            记录都市生活的点滴故事，在喧嚣中发现城市的韵律
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
                     </div>
+                </section>
 
-                    <!-- 秋色摄影 -->
-                    <div
-                        class="theme-item"
-                        onclick="location.href = 'photos-autumn.html'"
-                    >
-                        <div class="theme-image">
-                            <img
-                                src="https://images.pexels.com/photos/2292919/pexels-photo-2292919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="秋色摄影"
-                            />
-                            <div class="theme-overlay"></div>
-                        </div>
-                        <div class="theme-info">
-                            <h3>秋色摄影</h3>
-                            <p>定格秋日的绚烂色彩，感受落叶与金风的诗意画卷</p>
-                            <span class="theme-link"
-                                >查看作品 <i class="fas fa-arrow-right"></i
-                            ></span>
-                        </div>
+                <!-- Category 04: Travel -->
+                <section
+                    class="category-block"
+                    data-category="travel"
+                    onclick="location.href = 'photos/travel.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/31447535/pexels-photo-31447535.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="旅行摄影"
+                            loading="lazy"
+                        />
                     </div>
-                </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">04</span>
+                        <h2 class="category-title">Travel</h2>
+                        <p class="category-desc">
+                            足迹所至，镜头所向，用影像书写旅途中的诗与远方
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
 
-                <!-- 返回主页小按钮 -->
-                <div class="back-to-home">
-                    <a href="index.html" class="back-btn">
-                        <i class="fas fa-arrow-left"></i> 返回主页
-                    </a>
-                </div>
+                <!-- Category 05: Xinjiang -->
+                <section
+                    class="category-block"
+                    data-category="xinjiang"
+                    onclick="location.href = 'photos/xinjiang.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="新疆摄影"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">05</span>
+                        <h2 class="category-title">Xinjiang</h2>
+                        <p class="category-desc">
+                            记录西域的壮美风光与独特人文，感受大漠与雪山的壮阔
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
+
+                <!-- Category 06: Night -->
+                <section
+                    class="category-block"
+                    data-category="night"
+                    onclick="location.href = 'photos/night.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/955137/pexels-photo-955137.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="夜景/星空"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">06</span>
+                        <h2 class="category-title">Night</h2>
+                        <p class="category-desc">
+                            追逐星光与城市灯火，在黑夜中探寻光影的魔法
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
+
+                <!-- Category 07: Architecture -->
+                <section
+                    class="category-block"
+                    data-category="architecture"
+                    onclick="location.href = 'photos/architecture.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="建筑摄影"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">07</span>
+                        <h2 class="category-title">Architecture</h2>
+                        <p class="category-desc">
+                            构筑物的几何美学，在线条与光影间寻找建筑的诗性
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
+
+                <!-- Category 08: Autumn -->
+                <section
+                    class="category-block"
+                    data-category="autumn"
+                    onclick="location.href = 'photos/autumn.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/2292919/pexels-photo-2292919.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="秋色摄影"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">08</span>
+                        <h2 class="category-title">Autumn</h2>
+                        <p class="category-desc">
+                            定格秋日的绚烂色彩，在金红交织中感受季节的轮回
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
+
+                <!-- Category 09: Life -->
+                <section
+                    class="category-block"
+                    data-category="life"
+                    onclick="location.href = 'photos/life.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/31459363/pexels-photo-31459363.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="生活纪实"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">09</span>
+                        <h2 class="category-title">Life</h2>
+                        <p class="category-desc">
+                            聚焦日常的细腻瞬间，在平凡中发现生活的美学
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
+
+                <!-- Category 10: Food -->
+                <section
+                    class="category-block"
+                    data-category="food"
+                    onclick="location.href = 'photos/food.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="美食摄影"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">10</span>
+                        <h2 class="category-title">Food</h2>
+                        <p class="category-desc">
+                            舌尖上的视觉艺术，捕捉美食诱人的瞬间与温度
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
+
+                <!-- Category 11: Black & White -->
+                <section
+                    class="category-block"
+                    data-category="bw"
+                    onclick="location.href = 'photos/bw.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/785/pexels-photo-785.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="黑白摄影"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">11</span>
+                        <h2 class="category-title">Black & White</h2>
+                        <p class="category-desc">
+                            光影的纯粹表达，在单色世界里探寻影像的本质
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
+
+                <!-- Category 12: Suipai (Candid) -->
+                <section
+                    class="category-block"
+                    data-category="suipai"
+                    onclick="location.href = 'photos/suipai.html'"
+                >
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/1223649/pexels-photo-1223649.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="随拍摄影"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">12</span>
+                        <h2 class="category-title">Suipai</h2>
+                        <p class="category-desc">
+                            捕捉生活中的不经意瞬间，发现日常里的美好与诗意
+                        </p>
+                        <a class="category-link"
+                            >View Collection <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
+
+                <!-- Footer CTA -->
+                <section class="category-block footer-cta">
+                    <div class="category-bg">
+                        <img
+                            src="https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+                            alt="探索更多"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-number">13</span>
+                        <h2 class="category-title">Explore All</h2>
+                        <p class="category-desc">更多精彩，持续更新中</p>
+                        <a href="index.html" class="category-link"
+                            >Return Home <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </section>
             </main>
 
-            <!-- 灯箱效果 -->
-            <div class="lightbox">
-                <div class="lightbox-content">
-                    <span class="lightbox-close"
-                        ><i class="fas fa-times"></i
-                    ></span>
-                    <img class="lightbox-img" src="" alt="" />
-                    <div class="lightbox-caption"></div>
-                </div>
-                <div class="lightbox-nav lightbox-prev">
-                    <i class="fas fa-chevron-left"></i>
-                </div>
-                <div class="lightbox-nav lightbox-next">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
+            <!-- Floating Back to Home -->
+            <button
+                class="floating-back"
+                id="floatingBack"
+                aria-label="返回主页"
+            >
+                <span class="floating-back-icon">
+                    <i class="fas fa-arrow-left"></i>
+                </span>
+                <span class="floating-back-text">返回主页</span>
+            </button>
         </div>
 
+        <!-- Scroll Animation Script -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                // 主页面不需要灯箱功能，因为这里只是分类导航
-                // 灯箱功能已移至各个子页面中实现
+                // Intersection Observer for scroll-triggered animations
+                const observerOptions = {
+                    root: null,
+                    rootMargin: "0px 0px -10% 0px",
+                    threshold: 0.15,
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all category blocks
+                document
+                    .querySelectorAll(".category-block")
+                    .forEach((block) => {
+                        observer.observe(block);
+                    });
+
+                // Hero animation on load
+                const hero = document.querySelector(".gallery-hero");
+                if (hero) {
+                    setTimeout(() => hero.classList.add("visible"), 100);
+                }
+
+                // Prevent default on category links
+                document.querySelectorAll(".category-link").forEach((link) => {
+                    link.addEventListener("click", function (e) {
+                        e.stopPropagation();
+                    });
+                });
+
+                // Floating Back Button - World Class Design
+                const floatingBack = document.getElementById("floatingBack");
+                let isVisible = false;
+                let isHovered = false;
+
+                // Show/hide based on scroll position
+                function updateFloatingBackVisibility() {
+                    const scrollY = window.scrollY;
+                    const heroHeight =
+                        document.querySelector(".gallery-hero")?.offsetHeight ||
+                        0;
+
+                    if (scrollY > heroHeight + 100) {
+                        floatingBack.classList.add("visible");
+                        isVisible = true;
+                    } else {
+                        floatingBack.classList.remove("visible");
+                        isVisible = false;
+                    }
+                }
+
+                // Initial check
+                updateFloatingBackVisibility();
+
+                // Throttled scroll handler
+                let scrollTicking = false;
+                window.addEventListener(
+                    "scroll",
+                    function () {
+                        if (!scrollTicking) {
+                            requestAnimationFrame(function () {
+                                updateFloatingBackVisibility();
+                                scrollTicking = false;
+                            });
+                            scrollTicking = true;
+                        }
+                    },
+                    { passive: true },
+                );
+
+                // Click handler
+                floatingBack.addEventListener("click", function () {
+                    window.location.href = "index.html";
+                });
+
+                // Keyboard support - Escape to go back
+                document.addEventListener("keydown", function (e) {
+                    if (e.key === "Escape" && isVisible) {
+                        window.location.href = "index.html";
+                    }
+                });
+
+                // Touch feedback animation
+                floatingBack.addEventListener(
+                    "touchstart",
+                    function () {
+                        this.classList.add("touching");
+                    },
+                    { passive: true },
+                );
+
+                floatingBack.addEventListener(
+                    "touchend",
+                    function () {
+                        this.classList.remove("touching");
+                    },
+                    { passive: true },
+                );
             });
         </script>
-        <script src="js/image-error-handler.js"></script>
+        <script src="assets/js/image-error-handler.js"></script>
     </body>
 </html>

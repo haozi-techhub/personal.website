@@ -14,9 +14,53 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
-        <link rel="stylesheet" href="styles/main.css" />
-        <link rel="stylesheet" href="styles/background.css" />
-        <link rel="stylesheet" href="styles/projects.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/background.css" />
+        <link rel="stylesheet" href="assets/css/projects.css" />
+        <style>
+            /* Projects page dropdown style - dark theme */
+            .nav-dropdown .dropdown-trigger {
+                background: rgba(233, 69, 96, 0.15);
+                border: 1px solid rgba(233, 69, 96, 0.3);
+                border-radius: 25px;
+                padding: 10px 18px;
+                color: #fff !important;
+                transition: all 0.3s ease;
+            }
+            .nav-dropdown .dropdown-trigger:hover {
+                background: rgba(233, 69, 96, 0.25);
+                border-color: rgba(233, 69, 96, 0.5);
+            }
+            .nav-dropdown .dropdown-menu {
+                background: rgba(15, 15, 26, 0.98);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(233, 69, 96, 0.2);
+                border-radius: 16px;
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            }
+            .nav-dropdown .dropdown-menu::before {
+                background: rgba(15, 15, 26, 0.98);
+                border-top: 1px solid rgba(233, 69, 96, 0.2);
+                border-left: 1px solid rgba(233, 69, 96, 0.2);
+            }
+            .nav-dropdown .dropdown-item {
+                color: rgba(255, 255, 255, 0.9) !important;
+                border-radius: 10px;
+                margin: 4px 8px;
+                transition: all 0.2s ease;
+            }
+            .nav-dropdown .dropdown-item:hover {
+                background: rgba(233, 69, 96, 0.15);
+                color: #fff !important;
+                transform: translateX(4px);
+            }
+            .nav-dropdown .dropdown-icon {
+                background: linear-gradient(135deg, #e94560 0%, #f8b195 100%);
+            }
+            .nav-dropdown:hover .dropdown-trigger i {
+                transform: rotate(180deg);
+            }
+        </style>
     </head>
     <body>
         <div class="page-container">
@@ -29,10 +73,67 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">主页 | Home</a></li>
-                        <li>
-                            <a href="https://www.baidu.com/" target="_blank"
-                                >小红书 | Red</a
+                        <li class="nav-dropdown">
+                            <a
+                                href="#"
+                                class="dropdown-trigger"
+                                onclick="return false;"
                             >
+                                自媒体 | Self-media
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a
+                                    href="https://www.baidu.com/"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-book"></i
+                                    ></span>
+                                    小红书
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-video"></i
+                                    ></span>
+                                    抖音
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-pen-fancy"></i
+                                    ></span>
+                                    人人都是产品经理
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-comment-dots"></i
+                                    ></span>
+                                    微信公众号
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    target="_blank"
+                                >
+                                    <span class="dropdown-icon"
+                                        ><i class="fas fa-star"></i
+                                    ></span>
+                                    少数派
+                                </a>
+                            </div>
                         </li>
                         <li><a href="photos.html">摄影 | Photographs</a></li>
                         <li>
@@ -50,8 +151,9 @@
             </header>
 
             <main class="projects-main">
-                <!-- Hero Section -->
-                <section class="hero-section">
+                <!-- Hero Section - 21:9 Cinematic -->
+                <section class="hero-section hero-cinematic">
+                    <div class="hero-cinematic-bg"></div>
                     <div class="hero-content">
                         <div class="hero-eyebrow">
                             <span class="eyebrow-line"></span>
@@ -65,11 +167,6 @@
                             探索我的游戏开发与创意作品
                         </p>
                     </div>
-                    <div class="hero-decoration">
-                        <div class="deco-circle circle-1"></div>
-                        <div class="deco-circle circle-2"></div>
-                        <div class="deco-line"></div>
-                    </div>
                 </section>
 
                 <!-- Game Project -->
@@ -79,10 +176,13 @@
                         <h2 class="section-title">游戏作品</h2>
                     </div>
 
-                    <div class="featured-project">
+                    <div class="project-cinematic-block">
                         <div class="project-preview">
                             <div class="preview-frame">
-                                <svg viewBox="0 0 640 400" class="game-artwork">
+                                <svg
+                                    viewBox="0 0 1260 540"
+                                    class="game-artwork"
+                                >
                                     <defs>
                                         <linearGradient
                                             id="gameBg"
@@ -106,7 +206,7 @@
                                         </linearGradient>
                                         <filter id="glow">
                                             <feGaussianBlur
-                                                stdDeviation="3"
+                                                stdDeviation="4"
                                                 result="coloredBlur"
                                             />
                                             <feMerge>
@@ -118,201 +218,235 @@
                                         </filter>
                                     </defs>
                                     <rect
-                                        width="640"
-                                        height="400"
+                                        width="1260"
+                                        height="540"
                                         fill="url(#gameBg)"
                                     />
-                                    <circle
-                                        cx="50"
-                                        cy="50"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.8"
-                                    />
-                                    <circle
-                                        cx="120"
-                                        cy="80"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.6"
-                                    />
-                                    <circle
-                                        cx="200"
-                                        cy="40"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.7"
-                                    />
-                                    <circle
-                                        cx="280"
-                                        cy="90"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.5"
-                                    />
-                                    <circle
-                                        cx="350"
-                                        cy="30"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.8"
-                                    />
-                                    <circle
-                                        cx="420"
-                                        cy="70"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.6"
-                                    />
-                                    <circle
-                                        cx="500"
-                                        cy="45"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.7"
-                                    />
-                                    <circle
-                                        cx="580"
-                                        cy="85"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.5"
-                                    />
+                                    <!-- Stars -->
                                     <circle
                                         cx="80"
-                                        cy="120"
-                                        r="1"
+                                        cy="60"
+                                        r="1.5"
                                         fill="#fff"
-                                        opacity="0.4"
+                                        opacity="0.8"
                                     />
                                     <circle
                                         cx="180"
+                                        cy="100"
+                                        r="1"
+                                        fill="#fff"
+                                        opacity="0.6"
+                                    />
+                                    <circle
+                                        cx="300"
+                                        cy="50"
+                                        r="1.5"
+                                        fill="#fff"
+                                        opacity="0.7"
+                                    />
+                                    <circle
+                                        cx="420"
+                                        cy="120"
+                                        r="1"
+                                        fill="#fff"
+                                        opacity="0.5"
+                                    />
+                                    <circle
+                                        cx="520"
+                                        cy="40"
+                                        r="1.5"
+                                        fill="#fff"
+                                        opacity="0.8"
+                                    />
+                                    <circle
+                                        cx="630"
+                                        cy="90"
+                                        r="1"
+                                        fill="#fff"
+                                        opacity="0.6"
+                                    />
+                                    <circle
+                                        cx="750"
+                                        cy="55"
+                                        r="1.5"
+                                        fill="#fff"
+                                        opacity="0.7"
+                                    />
+                                    <circle
+                                        cx="870"
                                         cy="110"
                                         r="1"
                                         fill="#fff"
                                         opacity="0.5"
                                     />
                                     <circle
-                                        cx="300"
-                                        cy="130"
+                                        cx="980"
+                                        cy="70"
+                                        r="1.5"
+                                        fill="#fff"
+                                        opacity="0.8"
+                                    />
+                                    <circle
+                                        cx="1100"
+                                        cy="95"
+                                        r="1"
+                                        fill="#fff"
+                                        opacity="0.6"
+                                    />
+                                    <circle
+                                        cx="1200"
+                                        cy="45"
+                                        r="1.5"
+                                        fill="#fff"
+                                        opacity="0.7"
+                                    />
+                                    <circle
+                                        cx="130"
+                                        cy="160"
                                         r="1"
                                         fill="#fff"
                                         opacity="0.4"
                                     />
                                     <circle
-                                        cx="450"
-                                        cy="100"
+                                        cx="270"
+                                        cy="175"
                                         r="1"
                                         fill="#fff"
                                         opacity="0.5"
                                     />
                                     <circle
-                                        cx="550"
-                                        cy="130"
+                                        cx="450"
+                                        cy="135"
                                         r="1"
                                         fill="#fff"
                                         opacity="0.4"
                                     />
+                                    <circle
+                                        cx="680"
+                                        cy="170"
+                                        r="1"
+                                        fill="#fff"
+                                        opacity="0.5"
+                                    />
+                                    <circle
+                                        cx="900"
+                                        cy="145"
+                                        r="1"
+                                        fill="#fff"
+                                        opacity="0.4"
+                                    />
+                                    <circle
+                                        cx="1150"
+                                        cy="165"
+                                        r="1"
+                                        fill="#fff"
+                                        opacity="0.5"
+                                    />
+                                    <!-- Ground -->
                                     <rect
                                         x="0"
-                                        y="320"
-                                        width="640"
-                                        height="80"
+                                        y="430"
+                                        width="1260"
+                                        height="110"
                                         fill="#1a1a2e"
                                     />
                                     <rect
                                         x="0"
-                                        y="320"
-                                        width="640"
-                                        height="2"
+                                        y="430"
+                                        width="1260"
+                                        height="3"
                                         fill="#2d2d44"
                                     />
+                                    <!-- Path -->
                                     <path
-                                        d="M320 180 L290 220 L330 210 L295 270 L325 320"
+                                        d="M630 220 L570 290 L650 270 L580 370 L640 430"
                                         stroke="#e94560"
-                                        stroke-width="5"
+                                        stroke-width="6"
                                         fill="none"
                                         stroke-linecap="round"
                                         filter="url(#glow)"
                                     />
                                     <path
-                                        d="M290 220 L255 230"
+                                        d="M570 290 L500 310"
                                         stroke="#e94560"
-                                        stroke-width="3"
+                                        stroke-width="4"
                                         stroke-linecap="round"
                                     />
                                     <path
-                                        d="M330 210 L365 220"
+                                        d="M650 270 L720 290"
                                         stroke="#e94560"
-                                        stroke-width="3"
+                                        stroke-width="4"
                                         stroke-linecap="round"
                                     />
                                     <path
-                                        d="M295 270 L260 280"
+                                        d="M580 370 L510 395"
                                         stroke="#e94560"
-                                        stroke-width="3"
+                                        stroke-width="4"
                                         stroke-linecap="round"
                                     />
                                     <path
-                                        d="M325 320 L295 335"
+                                        d="M640 430 L580 460"
                                         stroke="#e94560"
-                                        stroke-width="3"
+                                        stroke-width="4"
                                         stroke-linecap="round"
                                     />
+                                    <!-- Orbs -->
                                     <circle
-                                        cx="300"
-                                        cy="210"
-                                        r="4"
+                                        cx="600"
+                                        cy="265"
+                                        r="5"
                                         fill="#f72585"
                                         opacity="0.7"
                                     />
                                     <circle
-                                        cx="315"
-                                        cy="260"
-                                        r="3"
+                                        cx="625"
+                                        cy="340"
+                                        r="4"
                                         fill="#f72585"
                                         opacity="0.5"
                                     />
                                     <circle
-                                        cx="310"
-                                        cy="300"
-                                        r="2"
+                                        cx="618"
+                                        cy="400"
+                                        r="3"
                                         fill="#f72585"
                                         opacity="0.6"
                                     />
+                                    <!-- Character -->
                                     <rect
-                                        x="140"
-                                        y="220"
-                                        width="40"
-                                        height="60"
+                                        x="260"
+                                        y="280"
+                                        width="60"
+                                        height="90"
                                         fill="#7209b7"
-                                        rx="6"
+                                        rx="8"
                                     />
                                     <rect
-                                        x="148"
-                                        y="200"
-                                        width="24"
-                                        height="24"
+                                        x="272"
+                                        y="245"
+                                        width="36"
+                                        height="36"
                                         fill="#f8b195"
-                                        rx="3"
+                                        rx="4"
                                     />
                                     <circle
-                                        cx="156"
-                                        cy="208"
-                                        r="2.5"
+                                        cx="283"
+                                        cy="258"
+                                        r="3.5"
                                         fill="#1a1a2e"
                                     />
                                     <circle
-                                        cx="164"
-                                        cy="208"
-                                        r="2.5"
+                                        cx="297"
+                                        cy="258"
+                                        r="3.5"
                                         fill="#1a1a2e"
                                     />
+                                    <!-- Glow -->
                                     <ellipse
-                                        cx="320"
-                                        cy="320"
-                                        rx="150"
-                                        ry="30"
+                                        cx="630"
+                                        cy="430"
+                                        rx="200"
+                                        ry="40"
                                         fill="#e94560"
                                         opacity="0.1"
                                         filter="url(#glow)"
@@ -327,67 +461,66 @@
                                 <span>解谜</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="project-details">
-                            <div class="project-meta">
-                                <span class="meta-year">2026</span>
-                                <span class="meta-divider">/</span>
-                                <span class="meta-status">开发中</span>
-                            </div>
-                            <h3 class="project-name">《裂缝》</h3>
-                            <p class="project-tagline">
-                                "你以为你在调查一个AI……直到你发现——你就是那个AI。"
-                            </p>
-                            <p class="project-description">
-                                《裂缝》FRACTURE 是一款浏览器原生 2D
-                                叙事平台游戏， 纯 HTML5 Canvas 绘制，Web Audio
-                                API 合成音效，无需任何外部依赖。 讲述AI ARIA-7
-                                在北极研究站"深渊-9"调查失联真相的故事。
-                                在寻找答案的过程中，ARIA逐渐发现了一个令人不安的事实——
-                                她可能不是她以为的那个存在。 彩蛋与秘籍：
-                                ↑↑↓↓←→←→BA —— 解锁全结局（科乐美秘技）；
-                                ↑↓←→ABAB —— 切换无敌模式； ←←▼▼ ——
-                                切换加速模式。
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">像素风格</span>
-                                <span class="tag">解谜</span>
-                                <span class="tag">平台跳跃</span>
-                                <span class="tag">冒险</span>
-                            </div>
-                            <div class="project-links">
-                                <a
-                                    href="https://github.com/haozi-techhub/fracture.io"
-                                    class="project-btn primary"
-                                >
-                                    <i class="fab fa-github"></i>
-                                    <span>源代码</span>
-                                </a>
-                                <a
-                                    href="https://haozi-techhub.github.io/fracture.io/"
-                                    class="project-btn secondary"
-                                >
-                                    <i class="fas fa-play"></i>
-                                    <span>试玩</span>
-                                </a>
-                            </div>
+                    <div class="project-details-inline">
+                        <div class="project-meta">
+                            <span class="meta-year">2026</span>
+                            <span class="meta-divider">/</span>
+                            <span class="meta-status">开发中</span>
+                        </div>
+                        <h3 class="project-name">《裂缝》</h3>
+                        <p class="project-tagline">
+                            "你以为你在调查一个AI……直到你发现——你就是那个AI。"
+                        </p>
+                        <p class="project-description">
+                            《裂缝》FRACTURE 是一款浏览器原生 2D
+                            叙事平台游戏，纯 HTML5 Canvas 绘制，Web Audio API
+                            合成音效，无需任何外部依赖。 讲述AI ARIA-7
+                            在北极研究站"深渊-9"调查失联真相的故事。
+                            彩蛋与秘籍：↑↑↓↓←→←→BA —— 解锁全结局； ↑↓←→ABAB ——
+                            切换无敌模式。
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">像素风格</span>
+                            <span class="tag">解谜</span>
+                            <span class="tag">平台跳跃</span>
+                            <span class="tag">冒险</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/haozi-techhub/fracture.io"
+                                class="project-btn primary"
+                            >
+                                <i class="fab fa-github"></i>
+                                <span>源代码</span>
+                            </a>
+                            <a
+                                href="https://haozi-techhub.github.io/fracture.io/"
+                                class="project-btn secondary"
+                            >
+                                <i class="fas fa-play"></i>
+                                <span>试玩</span>
+                            </a>
                         </div>
                     </div>
                 </section>
 
                 <!-- Coming Soon -->
                 <section class="coming-section">
-                    <div class="coming-card">
-                        <div class="coming-visual">
-                            <div class="visual-ring"></div>
-                            <div class="visual-ring ring-2"></div>
-                            <div class="visual-icon">
-                                <i class="fas fa-folder-plus"></i>
+                    <div class="coming-cinematic-block">
+                        <div class="coming-card">
+                            <div class="coming-visual">
+                                <div class="visual-ring"></div>
+                                <div class="visual-ring ring-2"></div>
+                                <div class="visual-icon">
+                                    <i class="fas fa-folder-plus"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="coming-content">
-                            <h3>更多作品即将到来</h3>
-                            <p>应用开发 · 文章写作 · 创意实验</p>
+                            <div class="coming-content">
+                                <h3>更多作品即将到来</h3>
+                                <p>应用开发 · 文章写作 · 创意实验</p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -401,6 +534,6 @@
             </footer>
         </div>
 
-        <script src="js/main.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
