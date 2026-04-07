@@ -20,24 +20,22 @@ Push to `main` triggers automatic deployment to GitHub Pages via `.github/workfl
 - `index.html` - homepage (contains social media dropdown navigation)
 - `resume.html` - resume/CV
 - `photos.html` - photography gallery hub
+- `photos-*.html` - photography sub-pages (fullscreen gallery with vertical scroll navigation)
 - `agents.html` - AI agents projects
 - `projects.html` - personal projects (dark cinematic theme)
 - `about game.html` - game page embedded via iframe in projects.html
 
-### Photography Pages (`photos/`)
-12 gallery pages: `architecture.html`, `autumn.html`, `bw.html`, `food.html`, `landscape.html`, `life.html`, `night.html`, `portrait.html`, `street.html`, `suipai.html`, `travel.html`, `xinjiang.html`
-
-### Styles (`assets/css/`)
+### Styles (`styles/`)
 - `main.css` - shared styles including navigation dropdown
-- `xinjiang-gallery.css` - premium dark cinematic gallery (shared across all 12 photo pages)
+- `xinjiang-gallery.css` - premium dark cinematic gallery (shared across 11 photo pages)
 - `photography.css` - legacy gallery styles (being phased out)
 - `fullscreen-gallery.css` - legacy fullscreen viewer (being phased out)
 - `projects.css` - dark theme for projects page
 - `background.css` / `animation-background.css` - animated backgrounds
 - `agents.css`, `resume.css`, `photos.css` - page-specific styles
 
-### JavaScript (`assets/js/`)
-- `xinjiang-gallery.js` - shared gallery interaction logic (22KB, used by all 12 photo pages)
+### JavaScript (`js/`)
+- `xinjiang-gallery.js` - shared gallery interaction logic (22KB, used by 11 photo pages)
 - `image-error-handler.js` - handles broken images
 - `background-animation.js` - animated background effects
 - `fix-avatar-image.js` - avatar image fixes
@@ -45,10 +43,10 @@ Push to `main` triggers automatic deployment to GitHub Pages via `.github/workfl
 
 ## Photography Gallery Pattern
 
-### Xinjiang Gallery Pattern (12 pages)
-`travel.html`, `suipai.html`, `street.html`, `portrait.html`, `night.html`, `life.html`, `landscape.html`, `food.html`, `bw.html`, `autumn.html`, `architecture.html`, `xinjiang.html`
+### New Xinjiang Gallery Pattern (11 pages)
+`photos-travel.html`, `photos-suipai.html`, `photos-street.html`, `photos-portrait.html`, `photos-night.html`, `photos-life.html`, `photos-landscape.html`, `photos-food.html`, `photos-bw.html`, `photos-autumn.html`, `photos-architecture.html`
 
-Uses shared `xinjiang-gallery.css` and `xinjiang-gallery.js` (22KB, used by all 12 photo pages):
+Uses shared `xinjiang-gallery.css` and `xinjiang-gallery.js`:
 - `.xinjiang-gallery` container with `.xg-*` prefixed classes
 - Keyboard navigation (↑↓ navigate, i for info, f for fullscreen, Esc to close)
 - Auto-hiding UI with 3-second inactivity timeout
