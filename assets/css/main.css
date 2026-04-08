@@ -84,6 +84,8 @@ header {
     align-items: center;
     padding: 25px 0;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 1001;
 }
 
 .logo {
@@ -179,6 +181,164 @@ nav ul li:nth-child(1) { animation-delay: 0.1s; }
 nav ul li:nth-child(2) { animation-delay: 0.15s; }
 nav ul li:nth-child(3) { animation-delay: 0.2s; }
 nav ul li:nth-child(4) { animation-delay: 0.25s; }
+nav ul li:nth-child(5) { animation-delay: 0.3s; }
+
+/* Navigation Dropdown */
+.nav-dropdown {
+    position: relative !important;
+}
+
+.nav-dropdown .dropdown-trigger {
+    cursor: pointer !important;
+}
+
+.nav-dropdown .dropdown-trigger i {
+    font-size: 0.65rem;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-trigger i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.12),
+        0 2px 10px rgba(0, 0, 0, 0.06),
+        0 0 0 1px rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.3s ease;
+    z-index: 1000;
+}
+
+/* Dropdown arrow */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown.active .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    color: var(--text-primary) !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.dropdown-item:hover {
+    background: rgba(26, 54, 93, 0.06);
+    color: var(--primary) !important;
+    transform: translateX(4px);
+}
+
+.dropdown-item:first-child {
+    margin-top: 4px;
+}
+
+.dropdown-item:last-child {
+    margin-bottom: 4px;
+}
+
+.dropdown-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    border-radius: 8px;
+    color: white;
+    font-size: 0.75rem;
+}
+
+/* Mobile: dropdown becomes accordion */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: auto;
+        background: rgba(0, 0, 0, 0.03);
+        border-radius: 12px;
+        margin-top: 8px;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown.active .dropdown-menu {
+        max-height: 400px;
+        padding: 8px;
+    }
+
+    .nav-dropdown .dropdown-trigger i {
+        transition: transform 0.3s ease;
+    }
+
+    .nav-dropdown.active .dropdown-trigger i {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-item {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+
+    .dropdown-item:hover {
+        transform: none;
+        background: rgba(26, 54, 93, 0.08);
+    }
+
+    .dropdown-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+}
 
 /* 主要内容区域 */
 .content-wrapper {
@@ -584,9 +744,37 @@ nav ul li:nth-child(4) { animation-delay: 0.25s; }
     font-size: 14px;
 }
 
+/* Projects链接高亮样式 */
+.projects-link {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 30px;
+    transition: all var(--duration-normal) var(--ease-out);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    height: 38px;
+    box-shadow: var(--shadow-primary);
+}
+
+.projects-link:hover {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-primary-lg);
+    color: white !important;
+}
+
+.projects-link i {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
 /* 为Agent链接添加动画 */
-nav ul li:nth-child(4) { 
-    animation-delay: 0.5s; 
+nav ul li:nth-child(4),
+nav ul li:nth-child(5) {
+    animation-delay: 0.5s;
 }
 
 /* 确保导航栏项目垂直对齐 */
