@@ -1,0 +1,7 @@
+.git
+.archive
+.vercel
+.env
+.env.local
+.claude
+docs

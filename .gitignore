@@ -34,3 +34,5 @@ Thumbs.db
 # 其他不需要版本控制的文件
 Untitled-*.html
 .projects-container
+.vercel
+.env*.local
