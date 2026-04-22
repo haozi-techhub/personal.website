@@ -1,4 +1,5 @@
 {
-  "buildCommand": null,
-  "outputDirectory": "."
+  "name": "personal.website",
+  "buildCommand": "rm -rf public && mkdir -p public && cp -R assets photos *.html public/ && cp .nojekyll CNAME public/",
+  "outputDirectory": "public"
 }
