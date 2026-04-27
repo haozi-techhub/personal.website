@@ -789,6 +789,10 @@ main { position: relative; z-index: 1; }
 .project-card.accent-blue { background: var(--electric); color: var(--white); }
 .project-card.accent-blue .project-tag { background: rgba(255,255,255,.15); color: white; }
 .project-card.accent-mist { background: var(--mist); }
+.project-card.accent-cinnabar { background: #1A1A1A; color: var(--white); }
+.project-card.accent-cinnabar .project-tag { background: rgba(231,76,60,.25); color: #FFBCB6; }
+.project-card.accent-cinnabar .project-no { color: rgba(255,255,255,.45); }
+.project-card.accent-cinnabar .project-link { color: #E74C3C; }
 .project-card.ghost {
   background: transparent;
   border: 2px dashed var(--ink-30);
