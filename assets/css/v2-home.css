@@ -357,41 +357,62 @@ main { position: relative; z-index: 1; }
   to { clip-path: inset(0 0 0 0); }
 }
 
-/* 照片装饰标签 */
+/* 照片装饰标签 —— 全部贴在照片内边缘，避免被 .snap overflow 裁切 */
 .portrait-badge {
   position: absolute;
   background: var(--acid);
   border: 1.5px solid var(--ink);
-  border-radius: var(--r-sm);
-  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  padding: 7px 14px;
   font-family: var(--f-mono);
-  font-size: var(--fs-meta);
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 700;
-  box-shadow: 4px 4px 0 var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
   opacity: 0;
   animation: badge-in 0.5s 1.4s var(--ease-back) forwards;
   z-index: 3;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 @keyframes badge-in {
   from { opacity: 0; transform: scale(0.4) rotate(-20deg); }
-  to   { opacity: 1; transform: scale(1) rotate(var(--r, -8deg)); }
+  to   { opacity: 1; transform: scale(1) rotate(var(--r, -4deg)); }
 }
-.portrait-badge.top-left  { top: -16px; left: -16px; --r: -8deg; }
-.portrait-badge.bottom-right { bottom: 20px; right: -20px; --r: 6deg; animation-delay: 1.6s; }
+/* 贴纸在照片内部的安全角落 */
+.portrait-badge.top-left  { top: 20px; left: 20px; --r: -4deg; }
+.portrait-badge.bottom-right {
+  bottom: 20px; right: 20px; --r: 3deg;
+  animation-delay: 1.6s;
+  background: var(--ink); color: var(--paper);
+  border-color: var(--paper);
+  box-shadow: 3px 3px 0 var(--paper);
+}
+
+/* 圆形旋转徽章 —— 紧贴照片右边缘，部分压在照片外但留足空间不被裁切 */
 .portrait-badge.star {
   background: var(--white);
   padding: 8px;
   border-radius: 50%;
   aspect-ratio: 1;
   display: inline-flex; align-items: center; justify-content: center;
-  font-size: 11px;
-  line-height: 1.1;
+  font-family: var(--f-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 1.05;
   text-align: center;
-  top: 40%; right: -36px;
-  width: 72px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  top: calc(50% - 44px); right: -28px;
+  width: 88px;
   --r: 0deg;
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  white-space: normal;
   animation: badge-in 0.6s 1.8s var(--ease-back) forwards, spin 18s linear 2.4s infinite;
 }
 @keyframes spin {
