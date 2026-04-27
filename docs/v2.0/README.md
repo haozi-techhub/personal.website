@@ -23,6 +23,7 @@
 | [`05-interaction-motion.md`](./05-interaction-motion.md) | 滚动、过渡、悬浮、装饰元素的运动规范 |
 | [`06-implementation-plan.md`](./06-implementation-plan.md) | 实施阶段、文件改动清单、风险点 |
 | [`07-asset-checklist.md`](./07-asset-checklist.md) | 需要你提供的素材（艺术照、项目图等）清单 |
+| [`08-signature-interactions.md`](./08-signature-interactions.md) | **招牌级交互**：磁吸光标、字符砸落、色块接力、卡片 tilt、彩蛋 |
 
 ## 三、参考图风格提取
 

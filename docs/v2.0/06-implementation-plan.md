@@ -22,7 +22,7 @@
 
 ---
 
-## 里程碑 M2 · 首页重设计（预计 1.5 天）
+## 里程碑 M2 · 首页重设计（预计 2 天，含招牌交互）
 
 ### 目标
 把 `index.html` 改为 5 屏 snap 滚动结构。
@@ -32,6 +32,9 @@
 - 新增 `assets/css/home.css`
 - 新增 `assets/js/snap.js` — snap 行为、键盘、hash 同步、nav 高亮
 - 新增 `assets/js/reveal.js` — IntersectionObserver 入场动画
+- 新增 `assets/js/cursor.js` — 磁吸自定义光标（08 文档 M1/M2/M3）
+- 新增 `assets/js/tilt.js` — 卡片 3D 倾斜与高光（08 文档 C1）
+- 新增 `assets/js/hero-fx.js` — Hello! 砸落 / 拆封 / 打字机（08 文档 S1-S3）
 - **需要素材**：艺术照（详见 07 文档）
 
 ### 验收
@@ -88,6 +91,6 @@
 - ❌ 暗色模式
 - ❌ i18n 多语言切换
 - ❌ 后端 / CMS
-- ❌ 动效库（GSAP / Lottie）
+- ❌ 动效库（GSAP / Lottie）—— 全部原生 Web API（CSS / WAAPI / View Transitions）
 - ❌ 自媒体内容抓取/嵌入
 - ❌ 评论 / 留言系统
