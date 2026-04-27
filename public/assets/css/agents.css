@@ -1,0 +1,354 @@
+/* 智能体页面样式 - 现代化升级版 */
+:root {
+    --agent-primary: #1a365d;
+    --agent-primary-light: #2c5282;
+    --agent-accent: #3182ce;
+    --agent-bg: #f5f8ff;
+}
+
+/* 主容器 */
+.agents-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-10) var(--space-4);
+}
+
+/* 页面标题 */
+.agents-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+    position: relative;
+}
+
+.agents-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--agent-primary);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    transition: all var(--duration-normal) var(--ease-out);
+}
+
+.agents-header h1::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--agent-primary), var(--agent-accent));
+    border-radius: 2px;
+}
+
+.agents-header p {
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: var(--space-6) auto 0;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* 智能体网格 */
+.agents-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    perspective: 1000px;
+}
+
+/* 智能体卡片 - 3D效果 */
+.agent-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: var(--space-8);
+    width: 100%;
+    transform-style: preserve-3d;
+    border: 1px solid rgba(26, 54, 93, 0.06);
+}
+
+.agent-card:hover {
+    transform: translateY(-8px) rotateX(2deg);
+    box-shadow: var(--shadow-xl);
+}
+
+.agent-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--agent-primary), var(--agent-accent), var(--agent-primary-light));
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.agent-card:hover::before {
+    opacity: 1;
+}
+
+/* 智能体图标 */
+.agent-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.1), rgba(49, 130, 206, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-5);
+    transition: all var(--duration-normal) var(--ease-out);
+    position: relative;
+}
+
+.agent-icon::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--agent-accent), var(--agent-primary));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.agent-card:hover .agent-icon {
+    background: linear-gradient(135deg, var(--agent-primary), var(--agent-primary-light));
+    transform: scale(1.1);
+}
+
+.agent-card:hover .agent-icon::after {
+    opacity: 1;
+}
+
+.agent-icon i {
+    font-size: 28px;
+    color: var(--agent-primary);
+    transition: all var(--duration-normal) var(--ease-out);
+}
+
+.agent-card:hover .agent-icon i {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 智能体信息 */
+.agent-info {
+    flex: 1;
+    margin-bottom: var(--space-6);
+}
+
+.agent-info h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+.agent-card:hover .agent-info h3 {
+    color: var(--agent-primary);
+}
+
+.agent-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+}
+
+/* 功能标签 */
+.agent-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+}
+
+.feature-tag {
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.06), rgba(49, 130, 206, 0.04));
+    color: var(--agent-primary);
+    padding: var(--space-1) var(--space-3);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--duration-normal) var(--ease-out);
+    border: 1px solid transparent;
+}
+
+.agent-card:hover .feature-tag {
+    background: linear-gradient(135deg, var(--agent-primary), var(--agent-primary-light));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* 使用按钮 */
+.use-agent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    background: linear-gradient(135deg, var(--agent-primary) 0%, var(--agent-primary-light) 100%);
+    color: white;
+    text-decoration: none;
+    padding: var(--space-3) var(--space-6);
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all var(--duration-normal) var(--ease-out);
+    margin-top: auto;
+    box-shadow: var(--shadow-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.use-agent-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.use-agent-btn:hover::before {
+    left: 100%;
+}
+
+.use-agent-btn:hover {
+    background: linear-gradient(135deg, var(--agent-primary-light) 0%, var(--agent-primary) 100%);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-primary-lg);
+    color: white;
+}
+
+.use-agent-btn i {
+    font-size: 0.9rem;
+    transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.use-agent-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* 页脚 */
+.agents-footer {
+    text-align: center;
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+    border-top: 1px solid rgba(26, 54, 93, 0.08);
+}
+
+.agents-footer p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.contact-for-agent {
+    margin-top: var(--space-4);
+}
+
+.contact-for-agent p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.contact-for-agent a {
+    color: var(--agent-accent);
+    text-decoration: none;
+    transition: all var(--duration-fast) var(--ease-out);
+    font-weight: 500;
+}
+
+.contact-for-agent a:hover {
+    color: var(--agent-primary);
+    text-decoration: underline;
+}
+
+/* 返回主页按钮 */
+.back-to-home {
+    margin-top: var(--space-6);
+    text-align: center;
+}
+
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    background: linear-gradient(135deg, var(--agent-primary) 0%, var(--agent-primary-light) 100%);
+    color: white;
+    text-decoration: none;
+    padding: var(--space-3) var(--space-6);
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all var(--duration-normal) var(--ease-out);
+    box-shadow: var(--shadow-primary);
+}
+
+.back-home-btn:hover {
+    background: linear-gradient(135deg, var(--agent-primary-light) 0%, var(--agent-primary) 100%);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-primary-lg);
+    color: white;
+}
+
+.back-home-btn i {
+    font-size: 1rem;
+    transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.back-home-btn:hover i {
+    transform: translateX(-4px);
+}
+
+/* 响应式 */
+@media (max-width: 1200px) {
+    .agents-grid {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .agents-grid {
+        max-width: 600px;
+    }
+
+    .agents-header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.02em;
+    }
+}
+
+@media (max-width: 480px) {
+    .agents-grid {
+        max-width: 100%;
+    }
+
+    .agent-card {
+        padding: var(--space-6);
+    }
+
+    .agents-header h1 {
+        font-size: 2rem;
+    }
+}

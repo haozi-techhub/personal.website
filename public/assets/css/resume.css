@@ -1,0 +1,405 @@
+/* 简历页面样式 - 现代化升级版 */
+:root {
+    --resume-primary: #1a365d;
+    --resume-primary-light: #2c5282;
+    --resume-accent: #3182ce;
+    --resume-success: #38a169;
+    --resume-bg: #f5f8ff;
+}
+
+/* 简历内容卡片 */
+.resume-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-10);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.resume-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(26, 54, 93, 0.12);
+}
+
+/* 简历头部 */
+.resume-header {
+    margin-bottom: var(--space-10);
+    border-bottom: 2px solid rgba(49, 130, 206, 0.2);
+    padding-bottom: var(--space-8);
+    position: relative;
+}
+
+.resume-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--resume-accent), var(--resume-primary));
+    animation: expandWidth 1.5s var(--ease-out) forwards;
+}
+
+@keyframes expandWidth {
+    from { width: 0; }
+    to { width: 100px; }
+}
+
+/* 个人照片 */
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, var(--resume-accent), var(--resume-primary)) border-box;
+    box-shadow: var(--shadow-lg);
+    margin-left: var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+/* 简历头部布局 */
+.resume-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personal-info {
+    flex: 1;
+    text-align: left;
+}
+
+.resume-header h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: var(--space-2);
+    color: var(--resume-primary);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.resume-header h2 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--resume-accent);
+    margin-bottom: var(--space-4);
+    font-weight: 500;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-6);
+}
+
+.contact-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.contact-info i {
+    margin-right: var(--space-2);
+    color: var(--resume-accent);
+    transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.contact-info p:hover i {
+    transform: scale(1.2);
+}
+
+/* 简历区块 */
+.resume-section {
+    margin-bottom: var(--space-10);
+}
+
+.resume-section h2 {
+    font-size: 1.3rem;
+    color: var(--resume-primary);
+    border-bottom: 1px solid rgba(26, 54, 93, 0.1);
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+.resume-section h2:hover {
+    color: var(--resume-accent);
+}
+
+.resume-section h2 i {
+    margin-right: var(--space-3);
+    color: var(--resume-accent);
+}
+
+/* 简历条目 */
+.resume-item {
+    margin-bottom: var(--space-6);
+    padding: var(--space-4);
+    border-radius: 12px;
+    transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.resume-item:hover {
+    background-color: rgba(49, 130, 206, 0.04);
+}
+
+.resume-item h3 {
+    font-size: 1.2rem;
+    color: var(--resume-accent);
+    margin-bottom: var(--space-1);
+    font-weight: 600;
+}
+
+.resume-date {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: var(--space-3);
+    font-size: 0.9rem;
+}
+
+.resume-item ul {
+    padding-left: var(--space-5);
+}
+
+.resume-item li {
+    margin-bottom: var(--space-2);
+    line-height: 1.6;
+}
+
+/* 技能样式 */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-4);
+}
+
+.skill-item {
+    margin-bottom: var(--space-3);
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.skill-bar {
+    height: 8px;
+    background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, var(--resume-accent), #63b3ed);
+    border-radius: 4px;
+    width: 0;
+    animation: skillFill 1s var(--ease-out) forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes skillFill {
+    from { width: 0; }
+    to { width: var(--skill-percent, 85%); }
+}
+
+/* 语言能力 */
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: 8px;
+    transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.language-item:hover {
+    background-color: rgba(49, 130, 206, 0.04);
+}
+
+.language-level i {
+    color: var(--resume-accent);
+    margin-right: 3px;
+    transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.language-item:hover .language-level i {
+    transform: scale(1.2);
+}
+
+/* 兴趣爱好 */
+.interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+.interest-item {
+    background: linear-gradient(135deg, rgba(49, 130, 206, 0.08), rgba(49, 130, 206, 0.04));
+    padding: var(--space-2) var(--space-4);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 500;
+    transition: all var(--duration-normal) var(--ease-out);
+    cursor: default;
+}
+
+.interest-item:hover {
+    background: linear-gradient(135deg, var(--resume-accent), var(--resume-primary-light));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.interest-item i {
+    color: var(--resume-accent);
+    transition: color var(--duration-normal) var(--ease-out);
+}
+
+.interest-item:hover i {
+    color: white;
+}
+
+/* 下载区域 */
+.download-resume {
+    text-align: center;
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+}
+
+/* PDF下载按钮 */
+.pdf-download-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--resume-accent), var(--resume-primary-light));
+    color: white;
+    text-decoration: none;
+    padding: var(--space-3) var(--space-8);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all var(--duration-normal) var(--ease-out);
+    box-shadow: var(--shadow-primary);
+}
+
+.pdf-download-link:hover {
+    background: linear-gradient(135deg, var(--resume-primary-light), var(--resume-accent));
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-primary-lg);
+    color: white;
+}
+
+.pdf-download-link i {
+    margin-left: var(--space-2);
+    transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.pdf-download-link:hover i {
+    transform: scale(1.2);
+}
+
+/* 返回主页按钮 */
+.back-btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--resume-success), #2f855a);
+    color: white;
+    text-decoration: none;
+    padding: var(--space-3) var(--space-8);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all var(--duration-normal) var(--ease-out);
+    box-shadow: 0 4px 14px rgba(56, 161, 105, 0.3);
+}
+
+.back-btn-link:hover {
+    background: linear-gradient(135deg, #2f855a, var(--resume-success));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 161, 105, 0.4);
+    color: white;
+}
+
+.back-btn-link i {
+    margin-left: var(--space-2);
+    transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.back-btn-link:hover i {
+    transform: translateX(4px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .resume-content {
+        padding: var(--space-6);
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto var(--space-4);
+    }
+
+    .resume-header-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .personal-info {
+        text-align: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .download-resume {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+}
