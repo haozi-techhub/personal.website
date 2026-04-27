@@ -36,3 +36,5 @@ Untitled-*.html
 .projects-container
 .vercel
 .env*.local
+public/
+.vercel/
