@@ -1,395 +1,815 @@
 <!doctype html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>任文浩的简历 | Resume</title>
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        />
-        <link rel="stylesheet" href="assets/css/background.css" />
-        <link rel="stylesheet" href="assets/css/resume.css" />
-        <link rel="stylesheet" href="assets/css/animation-background.css" />
-        <link rel="stylesheet" href="assets/css/resume-premium.css" />
-    </head>
-    <body>
-        <div class="page-container">
-            <header>
-                <div class="logo">
-                    <a href="index.html" class="logo-link">
-                        <span class="logo-text">Haozi</span>
-                    </a>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">主页 | Home</a></li>
-                        <li class="nav-dropdown">
-                            <a
-                                href="#"
-                                class="dropdown-trigger"
-                                onclick="return false;"
-                            >
-                                自媒体 | Self-media
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a
-                                    href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-book"></i
-                                    ></span>
-                                    小红书
-                                </a>
-                                <a
-                                    href="https://www.douyin.com/user/self?from_tab_name=main"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-video"></i
-                                    ></span>
-                                    抖音
-                                </a>
-                                <a
-                                    href="https://wen.woshipm.com/user/profile/qs4povf.html"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-pen-fancy"></i
-                                    ></span>
-                                    人人都是产品经理
-                                </a>
-                                <a
-                                    href="#"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-comment-dots"></i
-                                    ></span>
-                                    微信公众号
-                                </a>
-                                <a
-                                    href="https://sspai.com/u/d1ozl25x/updates"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-star"></i
-                                    ></span>
-                                    少数派
-                                </a>
-                            </div>
-                        </li>
-                        <li><a href="photos.html">摄影 | Photographs</a></li>
-                        <li>
-                            <a href="projects.html" class="projects-link"
-                                >Projects <i class="fas fa-rocket"></i
-                            ></a>
-                        </li>
-                        <li>
-                            <a href="agents.html" class="agent-link"
-                                >Agent <i class="fas fa-robot"></i
-                            ></a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume | 任文浩 Haozi</title>
+    <meta name="description" content="任文浩（Haozi）的简历 — AI 产品经理 / 设计师 / 摄影师。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/v2-tokens.css" />
+    <link rel="stylesheet" href="assets/css/v2-page.css" />
+    <style>
+      /* ==========================================================
+       *  Resume v2 · editorial / blush layout (ref: VYBE)
+       * ========================================================== */
+      .resume-hero {
+        position: relative;
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: calc(72px + var(--s-4)) var(--pad-x) var(--s-4);
+      }
+      .hero-mark {
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink-60);
+        display: flex; align-items: center; gap: var(--s-2);
+        margin-bottom: var(--s-3);
+      }
+      .hero-mark::before { content: ''; width: 32px; height: 1.5px; background: var(--ink); }
 
-            <main class="resume-content resume-premium">
-                <div class="resume-header">
-                    <div class="resume-header-content">
-                        <div class="personal-info">
-                            <h1>任文浩</h1>
-                            <h2>AI产品经理 | AI PM</h2>
-                            <div class="contact-info">
-                                <p>
-                                    <i class="fas fa-envelope"></i>
-                                    704494844@qq.com
-                                </p>
-                                <p>
-                                    <i class="fas fa-phone"></i> +86 17732585067
-                                </p>
-                                <p>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    中国，北京
-                                </p>
-                            </div>
-                        </div>
-                        <div class="profile-photo">
-                            <img
-                                src="https://images.pexels.com/photos/36558851/pexels-photo-36558851.png?_gl=1*1wqrm02*_ga*NDkyNzAwMzc4LjE3NDM1ODczMTU.*_ga_8JE65Q40S6*czE3NzM0NjQxOTckbzgkZzEkdDE3NzM0NjUyNjAkajU5JGwwJGgw"
-                                alt="任文浩个人照片"
-                            />
-                        </div>
-                    </div>
-                </div>
+      /* —— Editorial display: mixed italic + black Fraunces —— */
+      .hero-display {
+        font-family: var(--f-display);
+        font-size: clamp(60px, 9vw, 132px);
+        line-height: 0.92;
+        letter-spacing: -0.045em;
+        font-weight: 900;
+        margin-bottom: var(--s-2);
+      }
+      .hero-display .a { font-style: italic; font-weight: 400; color: var(--ink); }
+      .hero-display .b { color: var(--ink); }
+      .hero-display .c { font-style: italic; font-weight: 400; color: var(--blush); }
+      .hero-display .d { color: var(--blush); }
+      .hero-display .swoosh {
+        position: relative;
+        display: inline-block;
+      }
+      .hero-display .swoosh::after {
+        content: '';
+        position: absolute;
+        left: -4%; right: -4%; bottom: 0.05em;
+        height: 0.18em;
+        background: var(--blush);
+        opacity: 0.25;
+        border-radius: 999px;
+        transform: skewX(-6deg) rotate(-1deg);
+        z-index: -1;
+      }
 
-                <section class="resume-section">
-                    <span class="resume-section-number">01</span>
-                    <h2><i class="fas fa-user"></i> 个人简介 | Profile</h2>
-                    <p>
-                        热爱生活的AI产品经理，具有丰富的人工智能训练经验。社恐ENFJ，热爱摄影，善于发现生活中的美。
-                    </p>
-                </section>
+      /* —— Coral panel (核心信息卡) —— */
+      .resume-panel {
+        position: relative;
+        max-width: var(--container);
+        margin: var(--s-4) auto var(--s-6);
+        background: var(--blush);
+        border-radius: var(--r-xl);
+        padding: var(--s-6) var(--s-5) var(--s-5);
+        color: var(--white);
+        overflow: hidden;
+        box-shadow: 0 24px 64px rgba(255, 111, 97, 0.25);
+      }
+      .resume-panel::before {
+        content: '';
+        position: absolute;
+        right: -120px; top: 50%;
+        width: 480px; height: 480px;
+        background: rgba(255,255,255,.10);
+        border-radius: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
 
-                <section class="resume-section">
-                    <span class="resume-section-number">02</span>
-                    <h2>
-                        <i class="fas fa-graduation-cap"></i> 教育背景 |
-                        Education
-                    </h2>
-                    <div class="resume-item">
-                        <h3>产品设计</h3>
-                        <p class="resume-date">2019 - 2023</p>
-                        <p>华北理工大学</p>
-                    </div>
-                </section>
+      .panel-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: var(--s-4);
+        align-items: start;
+        position: relative;
+        z-index: 1;
+      }
 
-                <section class="resume-section">
-                    <span class="resume-section-number">03</span>
-                    <h2>
-                        <i class="fas fa-briefcase"></i> 工作经历 | Work
-                        Experience
-                    </h2>
-                    <div class="resume-item">
-                        <h3>大模型策略专家</h3>
-                        <p class="resume-date">
-                            阿里巴巴（中国）有限公司--2024.08 - 2025.08
-                        </p>
-                        <ul>
-                            <li>
-                                ·高考PLAN文案美化项目：负责夸克高考志愿填报助手项目管理，统筹内部团队标注
-                                Query 与 Plan 数据，需按考生信息优化 Plan 的 COT
-                                部分。针对标注效果问题，分四阶段调整策略：用大模型辅助模考成绩换算、清理幻觉与多余
-                                search、提供文案模板、带练优化思维链。考前四天交付，算法反馈达标，产品上线体验佳。
-                            </li>
-                            <li>
-                                ·文生图数据构建专项：参与20万+量级图像数据筛选与内容标注项目，实现供应商与内部团队的高效协同。项目分为筛选分类与内容描述两阶段。针对标注一致性问题，创建在线答疑文档及正反例样本库，显著提升跨团队理解一致性，解决标注规则频繁争议问题。面对图像描述阶段的专业性差异挑战，开发Coze智能体工具，有效提升整体标注质量。
-                            </li>
-                            <li>
-                                ·图片信息判读SFT专项：负责图片信息判读 SFT
-                                专项数据管理与质检，面对数据量大、标注难、人效低的困境，启用供应商标注。项目初期，针对答疑压力大、准确率与效率低等问题，采取详细培训带练、制定提问模板、细化打回备注、复盘同步共性问题等措施，一周内将准确率提至
-                                92%，保证项目如期交付。
-                            </li>
-                            <li>
-                                ·图文交错项目：负责政治、军事、财经类中英混合图文专项数据相关性评估工作。针对专业术语翻译不准确影响判断的问题，主动基于Coze平台设计专项翻译工作流，撰写结构化Prompt框架提升专业术语处理能力。解决了敏感话题翻译难题，通过灵活调用国内外大模型形成互补翻译策略，有效提升翻译准确率。成果在团队内广泛应用，显著提高团队标注质量。
-                            </li>
-                            <li>
-                                ·OCR图文校对项目：负责 10w 量级 OCR
-                                图文校对项目管理，协调供应商标注并主导质检。针对艺术字体、小字识别及阅读顺序等难题，制定差异化识别方案，与算法讨论后纳入规则文档。强调文本框完整覆盖要求，保障数据质量，项目顺利交付且算法反馈效果良好。
-                            </li>
-                            <li>
-                                ·DPO人类反馈美学及合理性标注项目：负责 18w 量级
-                                DPO
-                                美学及合理性标注项目管理，协调供应商标注并主导质检。针对人像数据优质率低问题，与算法沟通调整评分标准，创建在线
-                                Q&A 文档并每日复盘高频问题，保障项目准确率超
-                                95%，助力模型文生图效果提升。
-                            </li>
-                            <li>
-                                ·图片畸变判断项目：负责 3w
-                                量级模型生成图片畸变判断项目质检与验收，协调供应商标注。先整理多类畸变样本，与算法制定判断规则及标注规范；针对标注描述问题，用
-                                coze
-                                搭建智能体，提升描述质量，项目顺利交付，助力模型畸变问题减少、生成质量提升。
-                            </li>
-                            <li>
-                                ·脚本需求承接与撰写：负责承接团队内部各方面项目需求额数据处理python脚本撰写与相关工具开发，利用cursor快速响应需求并完成阶段性交付，培训脚本使用流程，跟进后序脚本与工具优化需求，完成最终可用脚本与工具交付，如：JSON代码正确性查验脚本、Excel质量数据合并与优化脚本、图片体积压缩工具等。
-                            </li>
-                            <li>
-                                ·Case收集分析与文档优化：收集数据标注过程中产生的goodcase和badcase，整理和提炼典型问题和共性问题，用于反哺规则文档优化、建立正例样本库&反例样本库、拉齐规则理解、为评测报告提供数据支持。
-                            </li>
-                            <li>
-                                ·数据分析与评测报告撰写：分析相关评测结果数据，进行数据问题定位、结论产出与后续规划建议，撰写相关评测报告，根据评测背景，前置评测核心结论，展示相关goodcase或badcase，为评测结论提供数据支持。协助需求方了解模型表现，为后续模型优化提供方向。
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h3>AI产品经理</h3>
-                        <p class="resume-date">
-                            北京金隅天坛家具股份有限公司--2023.07 - 2024.07
-                        </p>
-                        <ul>
-                            <li>
-                                ·家装PLC挂载项目：主导家装公司小程序图文 -
-                                设计师对接项目，针对用户联系设计师链路长、流失率高问题，通过文本分类模型解析图文标签、协同过滤算法匹配设计师。优化模型提升匹配准确率至
-                                85%，用 A/B
-                                测试简化交互降低流失率，上线后转化率提至
-                                18%，季度新增 1200 + 客户、150 单签约，增收 3500
-                                万元。
-                            </li>
-                            <li>
-                                ·家具造型描述专项训练：负责家具造型描述专项训练项目，围绕专业术语、设计元素及美学表达要求，设计结构化描述框架拆解产品特征。针对描述专业性与生动性平衡难题，用
-                                coze 搭建智能体并编写 prompt
-                                框架，提升描述质量，保障 4000
-                                条数据项目按时交付。
-                            </li>
-                            <li>
-                                ·家装风格指令遵循专项训练：负责家装风格指令遵循专项数据评估工作。制定多维度评估标准，包括指令遵循度、回答帮助性、真实性、简洁性及安全性。针对非设计背景团队，构建主流家装风格知识库，设计标准化回复模板，确保评估一致性，项目最终达成95%以上的准确率。
-                            </li>
-                            <li>
-                                ********************************************************************************************
-                            </li>
-                            <li>
-                                ********************************************************************************************
-                            </li>
-                            <li>
-                                ********************************************************************************************
-                            </li>
-                            <li>
-                                ********************************************************************************************
-                            </li>
-                            <li>
-                                ********************************************************************************************
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h3>数据标注（实习）</h3>
-                        <p class="resume-date">作业帮--2023.05 - 2023.06</p>
-                        <ul>
-                            <li>
-                                ·单轮对话专项：主要进行指令遵循的专项训练，明确模型在解答学生学习问题时需遵循的各类指令，如针对不同学科题型（选择题、简答题、应用题等）回答是否与学生问题一致。
-                            </li>
-                            <li>
-                                ·整理badcase：对 badcase 进行整理并分析，根据
-                                badcase
-                                分析结果，对现有的规则文档进行优化。修订对话流程、完善话术模板，确保规则文档能够更好地指导标注工作。
-                            </li>
-                            <li>
-                                ·供应商培训：负责组织并实施对供应商标注人员的培训工作，通过视频会议、案例演示等多种形式，向供应商传递准确的数据标注规则。
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+      .panel-bio { display: flex; flex-direction: column; gap: var(--s-2); }
+      .panel-bio .eyebrow {
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        opacity: 0.85;
+      }
+      .panel-bio h2 {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: clamp(28px, 3vw, 40px);
+        letter-spacing: -0.025em;
+        line-height: 1.1;
+        margin-bottom: var(--s-1);
+      }
+      .panel-bio p { font-size: 15px; line-height: 1.6; opacity: 0.95; max-width: 460px; }
+      .panel-bio .download {
+        display: inline-flex; align-items: center; gap: 10px;
+        margin-top: var(--s-3);
+        padding: 13px 20px;
+        background: var(--white); color: var(--ink);
+        border-radius: var(--r-pill);
+        font-weight: 700; font-size: 14px;
+        align-self: flex-start;
+        transition: all .25s var(--ease-io);
+        box-shadow: 0 6px 20px rgba(0,0,0,.18);
+      }
+      .panel-bio .download:hover { background: var(--ink); color: var(--acid); transform: translateY(-2px); }
+      .panel-bio .download .arrow { transition: transform .25s; }
+      .panel-bio .download:hover .arrow { transform: translateX(4px); }
 
-                <section class="resume-section">
-                    <span class="resume-section-number">04</span>
-                    <h2><i class="fas fa-cogs"></i> 技能 | Skills</h2>
-                    <div class="skills-container">
-                        <div class="skill-item">
-                            <span class="skill-name">Cursor/Trae</span>
-                            <div class="skill-bar">
-                                <div
-                                    class="skill-level"
-                                    style="width: 90%"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Coze</span>
-                            <div class="skill-bar">
-                                <div
-                                    class="skill-level"
-                                    style="width: 90%"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">PS</span>
-                            <div class="skill-bar">
-                                <div
-                                    class="skill-level"
-                                    style="width: 90%"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">PR</span>
-                            <div class="skill-bar">
-                                <div
-                                    class="skill-level"
-                                    style="width: 85%"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+      .panel-feature {
+        background: var(--white);
+        color: var(--ink);
+        border-radius: var(--r-lg);
+        padding: var(--s-3);
+        text-align: center;
+        position: relative;
+      }
+      .panel-feature .ftag {
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--blush);
+        margin-bottom: var(--s-2);
+      }
+      .panel-feature .photo {
+        width: 100%; aspect-ratio: 1;
+        border-radius: var(--r-md);
+        overflow: hidden;
+        margin-bottom: var(--s-2);
+        background: var(--mist);
+      }
+      .panel-feature .photo img { width: 100%; height: 100%; object-fit: cover; }
+      .panel-feature h3 {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: 22px;
+        letter-spacing: -0.02em;
+        margin-bottom: 4px;
+      }
+      .panel-feature p { font-size: 13px; color: var(--ink-60); margin-bottom: var(--s-2); }
+      .panel-feature .pricetag {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: var(--blush); color: var(--white);
+        padding: 6px 14px; border-radius: var(--r-pill);
+        font-family: var(--f-mono); font-size: var(--fs-meta);
+        letter-spacing: 0.1em; font-weight: 700;
+      }
 
-                <section class="resume-section">
-                    <span class="resume-section-number">05</span>
-                    <h2>
-                        <i class="fas fa-project-diagram"></i> 项目经验 |
-                        Projects
-                    </h2>
-                    <div class="resume-item">
-                        <h3>AI图像识别系统</h3>
-                        <p>负责过高效的图像识别系统，准确率达到95%以上。</p>
-                    </div>
-                    <div class="resume-item">
-                        <h3>自然语言处理模型</h3>
-                        <p>参与开发了一个能够理解复杂语境的NLP模型。</p>
-                    </div>
-                </section>
+      .panel-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--s-2);
+        align-content: start;
+      }
+      .stat {
+        background: rgba(255,255,255,.15);
+        border: 1px solid rgba(255,255,255,.25);
+        border-radius: var(--r-md);
+        padding: var(--s-2);
+        backdrop-filter: blur(10px);
+      }
+      .stat .icon {
+        width: 32px; height: 32px;
+        background: var(--white);
+        border-radius: 50%;
+        color: var(--blush);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      .stat .num {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 1;
+        margin-bottom: 2px;
+      }
+      .stat .label {
+        font-family: var(--f-mono);
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        opacity: 0.85;
+      }
 
-                <section class="resume-section">
-                    <span class="resume-section-number">06</span>
-                    <h2>
-                        <i class="fas fa-language"></i> 语言能力 | Languages
-                    </h2>
-                    <div class="language-item">
-                        <span>中文（母语）</span>
-                        <div class="language-level">
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                        </div>
-                    </div>
-                    <div class="language-item">
-                        <span>英语</span>
-                        <div class="language-level">
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="far fa-circle"></i>
-                        </div>
-                    </div>
-                </section>
+      .contact-pills {
+        display: flex; flex-wrap: wrap; gap: 8px;
+        margin-top: var(--s-3);
+      }
+      .contact-pills a {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 8px 14px;
+        background: rgba(255,255,255,.18);
+        border: 1px solid rgba(255,255,255,.3);
+        border-radius: var(--r-pill);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--white);
+        transition: all .2s var(--ease-io);
+      }
+      .contact-pills a:hover { background: var(--white); color: var(--blush); transform: translateY(-2px); }
 
-                <section class="resume-section">
-                    <span class="resume-section-number">07</span>
-                    <h2><i class="fas fa-heart"></i> 兴趣爱好 | Interests</h2>
-                    <div class="interests-container">
-                        <div class="interest-item">
-                            <i class="fas fa-camera"></i> 摄影
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-book"></i> 阅读
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-hiking"></i> 旅行
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-bicycle"></i> 骑行
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-paint-brush"></i> 陶艺
-                        </div>
-                    </div>
-                </section>
-            </main>
+      /* ===== Section blocks ===== */
+      .resume-body { max-width: var(--container); margin: 0 auto; padding: 0 var(--pad-x); }
 
-            <div class="download-resume">
-                <a href="#" download class="pdf-download-link">
-                    <span class="download-text">下载PDF版简历</span>
-                    <i class="fas fa-file-pdf"></i>
-                </a>
-                <a href="index.html" class="back-btn-link">
-                    <span>返回主页</span>
-                    <i class="fas fa-home"></i>
-                </a>
+      .res-section {
+        padding: var(--s-5) 0;
+        border-top: 1px solid var(--ink-10);
+        position: relative;
+      }
+      .res-section:first-of-type { border-top: 0; }
+      .res-head {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: var(--s-3);
+        margin-bottom: var(--s-4);
+        align-items: end;
+      }
+      .res-num {
+        font-family: var(--f-display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(48px, 5vw, 64px);
+        line-height: 1;
+        color: var(--electric);
+      }
+      .res-title-wrap { display: flex; flex-direction: column; gap: 4px; }
+      .res-title-wrap .en {
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-60);
+      }
+      .res-title {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: clamp(28px, 3.4vw, 44px);
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+      .res-title em {
+        font-style: italic; font-weight: 400; color: var(--electric);
+      }
+
+      /* ===== Timeline (work / education) ===== */
+      .timeline { display: flex; flex-direction: column; gap: var(--s-4); }
+      .tl-item {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: var(--s-4);
+        position: relative;
+      }
+      .tl-item::before {
+        content: '';
+        position: absolute;
+        left: 200px; top: 8px; bottom: -32px;
+        width: 1.5px;
+        background: var(--ink-10);
+        margin-left: -1px;
+      }
+      .tl-item:last-child::before { display: none; }
+      .tl-meta {
+        display: flex; flex-direction: column; gap: 6px;
+        position: relative;
+      }
+      .tl-meta::after {
+        content: '';
+        position: absolute;
+        right: -1px; top: 8px;
+        width: 12px; height: 12px;
+        background: var(--electric);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px var(--paper);
+        transform: translateX(50%);
+      }
+      .tl-date {
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-60);
+      }
+      .tl-org {
+        font-family: var(--f-display);
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--ink);
+      }
+      .tl-content { padding-left: var(--s-3); padding-bottom: var(--s-2); }
+      .tl-role {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: clamp(22px, 2.4vw, 32px);
+        letter-spacing: -0.02em;
+        margin-bottom: var(--s-2);
+      }
+      .tl-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+      .tl-list li {
+        position: relative;
+        padding-left: 22px;
+        line-height: 1.6;
+        color: var(--ink);
+        font-size: 14.5px;
+      }
+      .tl-list li::before {
+        content: '';
+        position: absolute;
+        left: 0; top: 10px;
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        border: 1.5px solid var(--ink);
+      }
+      .tl-list li.masked {
+        color: var(--ink-30);
+        font-family: var(--f-mono);
+        letter-spacing: 0.05em;
+      }
+      .tl-list li.masked::before { background: var(--ink-10); border-color: var(--ink-10); }
+
+      /* ===== Skills ===== */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: var(--s-3);
+      }
+      .skill {
+        background: var(--white);
+        border: 1.5px solid var(--ink-10);
+        border-radius: var(--r-md);
+        padding: var(--s-3);
+        transition: all .3s var(--ease-out);
+      }
+      .skill:hover {
+        border-color: var(--electric);
+        transform: translateY(-3px);
+        box-shadow: var(--sh-md);
+      }
+      .skill-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+      .skill-name { font-family: var(--f-display); font-weight: 900; font-size: 18px; letter-spacing: -0.01em; }
+      .skill-pct { font-family: var(--f-mono); font-size: 13px; color: var(--electric); font-weight: 700; }
+      .skill-bar {
+        height: 6px;
+        background: var(--ink-05);
+        border-radius: var(--r-pill);
+        overflow: hidden;
+        position: relative;
+      }
+      .skill-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--electric), var(--acid));
+        border-radius: var(--r-pill);
+        width: 0;
+        transition: width 1.2s var(--ease-out);
+      }
+      .skill.in .skill-fill { width: var(--w, 90%); }
+
+      /* ===== Languages ===== */
+      .lang-list { display: flex; flex-direction: column; gap: var(--s-2); max-width: 520px; }
+      .lang {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: var(--s-2) var(--s-3);
+        background: var(--white);
+        border-radius: var(--r-md);
+        border: 1px solid var(--ink-10);
+      }
+      .lang-name { font-weight: 600; font-size: 15px; }
+      .lang-dots { display: flex; gap: 6px; }
+      .lang-dots span {
+        width: 12px; height: 12px;
+        border-radius: 50%;
+        border: 1.5px solid var(--ink);
+      }
+      .lang-dots span.full { background: var(--electric); border-color: var(--electric); }
+
+      /* ===== Interests ===== */
+      .interest-row { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+      .interest {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 12px 22px;
+        background: var(--paper-2);
+        border: 1.5px solid var(--ink);
+        border-radius: var(--r-pill);
+        font-weight: 600;
+        font-size: 14px;
+        transition: all .2s var(--ease-io);
+        cursor: default;
+      }
+      .interest:hover {
+        background: var(--acid);
+        transform: rotate(-2deg) translateY(-2px);
+        box-shadow: 4px 4px 0 var(--ink);
+      }
+      .interest i { color: var(--blush); font-size: 16px; }
+
+      /* ===== Projects ===== */
+      .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--s-3);
+      }
+      .proj {
+        background: var(--mist);
+        border-radius: var(--r-lg);
+        padding: var(--s-3);
+        position: relative;
+        overflow: hidden;
+        transition: all .3s var(--ease-out);
+      }
+      .proj:hover { background: var(--electric); color: var(--white); transform: translateY(-3px); }
+      .proj h4 { font-family: var(--f-display); font-weight: 900; font-size: 22px; margin-bottom: 8px; letter-spacing: -0.02em; }
+      .proj p { font-size: 14px; line-height: 1.55; opacity: 0.85; }
+
+      /* ===== Bottom CTA ===== */
+      .resume-cta {
+        max-width: var(--container);
+        margin: var(--s-6) auto 0;
+        padding: var(--s-5) var(--s-4);
+        background: var(--ink);
+        color: var(--paper);
+        border-radius: var(--r-xl);
+        text-align: center;
+      }
+      .resume-cta h3 {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin-bottom: var(--s-3);
+      }
+      .resume-cta h3 em { font-style: italic; font-weight: 400; color: var(--acid); }
+      .resume-cta p { color: rgba(244,241,234,.7); margin-bottom: var(--s-3); }
+      .resume-cta .actions { display: flex; justify-content: center; gap: var(--s-2); flex-wrap: wrap; }
+      .resume-cta .btn-primary { background: var(--acid); color: var(--ink); }
+      .resume-cta .btn-primary:hover { background: var(--paper); color: var(--ink); }
+      .resume-cta .btn-ghost { border-color: var(--paper); color: var(--paper); }
+      .resume-cta .btn-ghost:hover { background: var(--acid); color: var(--ink); border-color: var(--acid); }
+
+      @media (max-width: 900px) {
+        .panel-grid { grid-template-columns: 1fr; }
+        .resume-panel { padding: var(--s-4) var(--s-3); border-radius: var(--r-lg); }
+        .res-head { grid-template-columns: 1fr; }
+        .tl-item { grid-template-columns: 1fr; }
+        .tl-item::before { display: none; }
+        .tl-meta::after { display: none; }
+        .tl-content { padding-left: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <a href="index.html" class="nav-logo" aria-label="Haozi · 在线">
+        <span class="logo-text">Ha<span>o</span>zi.</span>
+        <span class="logo-status" aria-hidden="true"></span>
+      </a>
+      <div class="nav-main">
+        <ul class="nav-pill">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li class="nav-dropdown">
+            <a href="#" onclick="return false;" aria-haspopup="true">Self-media<span class="chev">▼</span></a>
+            <div class="nav-dropdown-menu">
+              <a href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc" target="_blank" rel="noopener">📕 小红书</a>
+              <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" rel="noopener">🎬 抖音</a>
+              <a href="https://wen.woshipm.com/user/profile/qs4povf.html" target="_blank" rel="noopener">✍ 人人都是产品经理</a>
+              <a href="https://sspai.com/u/d1ozl25x/updates" target="_blank" rel="noopener">⭐ 少数派</a>
+              <a href="#" target="_blank" rel="noopener">💬 微信公众号</a>
             </div>
-        </div>
+          </li>
+        </ul>
+        <a href="resume.html" class="nav-cta">
+          <span>Resume</span>
+          <span class="arrow">●</span>
+        </a>
+      </div>
+    </header>
 
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/background-animation.js"></script>
-    </body>
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="resume-hero">
+        <div class="hero-mark">Curriculum Vitae · 简历</div>
+        <h1 class="hero-display">
+          <span class="a">Building</span> <span class="b">AI</span><br />
+          that <span class="c swoosh">feels</span> <span class="d">HUMAN.</span>
+        </h1>
+      </section>
+
+      <!-- ===== CORAL PANEL ===== -->
+      <section class="resume-panel" data-reveal>
+        <div class="panel-grid">
+          <!-- 左：bio -->
+          <div class="panel-bio">
+            <span class="eyebrow">Available for work · 2025</span>
+            <h2>任文浩 / Haozi<br />AI Product Manager</h2>
+            <p>
+              热爱生活的 AI 产品经理，具有丰富的人工智能训练经验。
+              社恐 ENFJ，热爱摄影，善于发现生活中的美。
+            </p>
+            <div class="contact-pills">
+              <a href="mailto:704494844@qq.com"><i class="fas fa-envelope"></i> 704494844@qq.com</a>
+              <a href="tel:+8617732585067"><i class="fas fa-phone"></i> +86 17732585067</a>
+              <span class="contact-pills" style="margin: 0;"><a href="#"><i class="fas fa-map-marker-alt"></i> 中国，北京</a></span>
+            </div>
+            <a class="download" href="#" download>
+              下载 PDF 简历 <span class="arrow">↓</span>
+            </a>
+          </div>
+
+          <!-- 中：照片卡 -->
+          <div class="panel-feature">
+            <div class="ftag">★ Featured</div>
+            <div class="photo">
+              <img src="photos/hero/portrait-hero.png" alt="任文浩个人照片" />
+            </div>
+            <h3>任文浩 · Haozi</h3>
+            <p>AIPM · 设计 · 摄影</p>
+            <div class="pricetag"><i class="fas fa-circle" style="color:#22C55E; font-size:8px;"></i> Open to work</div>
+          </div>
+
+          <!-- 右：stats -->
+          <div class="panel-stats">
+            <div class="stat">
+              <div class="icon"><i class="fas fa-briefcase"></i></div>
+              <div class="num">3+</div>
+              <div class="label">Years AIPM</div>
+            </div>
+            <div class="stat">
+              <div class="icon"><i class="fas fa-database"></i></div>
+              <div class="num">20w+</div>
+              <div class="label">Data labeled</div>
+            </div>
+            <div class="stat">
+              <div class="icon"><i class="fas fa-camera"></i></div>
+              <div class="num">12</div>
+              <div class="label">Photo collections</div>
+            </div>
+            <div class="stat">
+              <div class="icon"><i class="fas fa-robot"></i></div>
+              <div class="num">3</div>
+              <div class="label">Live agents</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BODY SECTIONS ===== -->
+      <div class="resume-body">
+
+        <!-- 01 Profile -->
+        <section class="res-section" data-reveal>
+          <div class="res-head">
+            <div class="res-num">01</div>
+            <div class="res-title-wrap">
+              <span class="en">Profile · 个人简介</span>
+              <h2 class="res-title">A maker who thinks <em>like a designer.</em></h2>
+            </div>
+          </div>
+          <p style="max-width: 720px; font-size: 17px; line-height: 1.7;">
+            热爱生活的 AI 产品经理，具有丰富的人工智能训练经验。社恐 ENFJ，热爱摄影，善于发现生活中的美。
+            在工具理性与浪漫主义之间反复横跳，用产品的脑子做事，用设计师的眼睛看世界。
+          </p>
+        </section>
+
+        <!-- 02 Education -->
+        <section class="res-section" data-reveal>
+          <div class="res-head">
+            <div class="res-num">02</div>
+            <div class="res-title-wrap">
+              <span class="en">Education · 教育背景</span>
+              <h2 class="res-title">School <em>days.</em></h2>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-meta">
+                <div class="tl-date">2019 — 2023</div>
+                <div class="tl-org">华北理工大学</div>
+              </div>
+              <div class="tl-content">
+                <h3 class="tl-role">产品设计</h3>
+                <ul class="tl-list">
+                  <li>本科主修产品设计，奠定造型与交互基础。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 Experience -->
+        <section class="res-section" data-reveal>
+          <div class="res-head">
+            <div class="res-num">03</div>
+            <div class="res-title-wrap">
+              <span class="en">Work Experience · 工作经历</span>
+              <h2 class="res-title">Things I've <em>shipped</em>.</h2>
+            </div>
+          </div>
+          <div class="timeline">
+            <!-- 阿里 -->
+            <div class="tl-item">
+              <div class="tl-meta">
+                <div class="tl-date">2024.08 — 2025.08</div>
+                <div class="tl-org">阿里巴巴（中国）有限公司</div>
+              </div>
+              <div class="tl-content">
+                <h3 class="tl-role">大模型策略专家</h3>
+                <ul class="tl-list">
+                  <li>高考 PLAN 文案美化：负责夸克高考志愿填报助手项目管理，统筹内部团队标注 Query 与 Plan 数据，按考生信息优化 Plan 的 COT。分四阶段调整策略：模考成绩换算、清理幻觉与多余 search、提供模板、带练优化思维链。考前四天交付，算法反馈达标，产品上线体验佳。</li>
+                  <li>文生图数据构建：参与 20w+ 量级图像筛选与内容标注。创建在线答疑文档与正反例样本库，提升跨团队一致性；开发 Coze 智能体工具，提升整体标注质量。</li>
+                  <li>图片信息判读 SFT：负责 SFT 数据管理与质检。详细培训带练 + 提问模板 + 细化打回备注 + 复盘共性问题，一周内将准确率提至 92%。</li>
+                  <li>图文交错项目：政治、军事、财经类中英混合图文相关性评估。基于 Coze 设计专项翻译工作流，结构化 Prompt 框架提升专业术语处理能力，灵活调用国内外大模型形成互补翻译策略。</li>
+                  <li>OCR 图文校对：10w 量级 OCR 图文校对管理。针对艺术字体、小字识别及阅读顺序难题，制定差异化识别方案并纳入规则文档。</li>
+                  <li>DPO 人类反馈美学及合理性标注：18w 量级。与算法沟通调整评分标准，创建在线 Q&A 文档每日复盘高频问题，准确率超 95%。</li>
+                  <li>图片畸变判断：3w 量级模型生成图片畸变判断质检与验收。整理多类畸变样本、与算法制定判断规则；用 Coze 搭建智能体提升描述质量。</li>
+                  <li>脚本需求承接：利用 Cursor 快速响应需求，交付 JSON 校验、Excel 合并与优化、图片压缩等工具。</li>
+                  <li>Case 收集与文档优化：整理 goodcase / badcase 反哺规则文档与样本库，为评测报告提供数据支持。</li>
+                  <li>数据分析与评测报告撰写：定位数据问题，前置核心结论，为模型优化提供方向。</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 北京金隅 -->
+            <div class="tl-item">
+              <div class="tl-meta">
+                <div class="tl-date">2023.07 — 2024.07</div>
+                <div class="tl-org">北京金隅天坛家具股份有限公司</div>
+              </div>
+              <div class="tl-content">
+                <h3 class="tl-role">AI 产品经理</h3>
+                <ul class="tl-list">
+                  <li>家装 PLC 挂载项目：主导小程序图文 - 设计师对接。文本分类模型解析图文标签 + 协同过滤匹配设计师，匹配准确率 85%；A/B 测试简化交互，转化率 18%，季度新增 1200+ 客户、150 单签约，增收 3500 万元。</li>
+                  <li>家具造型描述专项训练：设计结构化描述框架拆解产品特征；用 Coze 搭建智能体并编写 prompt 框架，4000 条数据按时交付。</li>
+                  <li>家装风格指令遵循专项训练：制定多维度评估标准（指令遵循度 / 帮助性 / 真实性 / 简洁性 / 安全性）；构建主流家装风格知识库与标准化模板，准确率 95%+。</li>
+                  <li class="masked">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</li>
+                  <li class="masked">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</li>
+                  <li class="masked">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</li>
+                  <li class="masked">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</li>
+                  <li class="masked">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 作业帮 -->
+            <div class="tl-item">
+              <div class="tl-meta">
+                <div class="tl-date">2023.05 — 2023.06</div>
+                <div class="tl-org">作业帮</div>
+              </div>
+              <div class="tl-content">
+                <h3 class="tl-role">数据标注 · 实习</h3>
+                <ul class="tl-list">
+                  <li>单轮对话专项：指令遵循训练，明确不同学科题型回答与学生问题的一致性。</li>
+                  <li>整理 badcase：分析后修订对话流程、完善话术模板，优化规则文档以更好指导标注工作。</li>
+                  <li>供应商培训：通过视频会议、案例演示等方式，向供应商传递准确的数据标注规则。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04 Skills -->
+        <section class="res-section" data-reveal>
+          <div class="res-head">
+            <div class="res-num">04</div>
+            <div class="res-title-wrap">
+              <span class="en">Skills · 技能</span>
+              <h2 class="res-title">Tools I <em>swear by.</em></h2>
+            </div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill" style="--w: 90%">
+              <div class="skill-head"><span class="skill-name">Cursor / Trae</span><span class="skill-pct">90</span></div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" style="--w: 90%">
+              <div class="skill-head"><span class="skill-name">Coze</span><span class="skill-pct">90</span></div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" style="--w: 90%">
+              <div class="skill-head"><span class="skill-name">Photoshop</span><span class="skill-pct">90</span></div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" style="--w: 85%">
+              <div class="skill-head"><span class="skill-name">Premiere</span><span class="skill-pct">85</span></div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05 Projects -->
+        <section class="res-section" data-reveal>
+          <div class="res-head">
+            <div class="res-num">05</div>
+            <div class="res-title-wrap">
+              <span class="en">Projects · 项目经验</span>
+              <h2 class="res-title">Side <em>quests.</em></h2>
+            </div>
+          </div>
+          <div class="proj-grid">
+            <div class="proj">
+              <h4>AI 图像识别系统</h4>
+              <p>负责高效的图像识别系统，准确率达到 95% 以上。</p>
+            </div>
+            <div class="proj">
+              <h4>自然语言处理模型</h4>
+              <p>参与开发了一个能够理解复杂语境的 NLP 模型。</p>
+            </div>
+            <a class="proj" href="projects.html" style="text-decoration: none;">
+              <h4>更多个人项目 →</h4>
+              <p>《裂缝》FRACTURE / Haozi Web v2 / Agents — 在 Projects 页查看完整清单。</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- 06 Languages -->
+        <section class="res-section" data-reveal>
+          <div class="res-head">
+            <div class="res-num">06</div>
+            <div class="res-title-wrap">
+              <span class="en">Languages · 语言能力</span>
+              <h2 class="res-title">I speak <em>two.</em></h2>
+            </div>
+          </div>
+          <div class="lang-list">
+            <div class="lang">
+              <span class="lang-name">中文 · Chinese <span style="color:var(--ink-60); font-weight:400;">（母语）</span></span>
+              <div class="lang-dots">
+                <span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span>
+              </div>
+            </div>
+            <div class="lang">
+              <span class="lang-name">英语 · English</span>
+              <div class="lang-dots">
+                <span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 07 Interests -->
+        <section class="res-section" data-reveal>
+          <div class="res-head">
+            <div class="res-num">07</div>
+            <div class="res-title-wrap">
+              <span class="en">Interests · 兴趣爱好</span>
+              <h2 class="res-title">Off the <em>clock.</em></h2>
+            </div>
+          </div>
+          <div class="interest-row">
+            <div class="interest"><i class="fas fa-camera"></i> 摄影</div>
+            <div class="interest"><i class="fas fa-book"></i> 阅读</div>
+            <div class="interest"><i class="fas fa-hiking"></i> 旅行</div>
+            <div class="interest"><i class="fas fa-bicycle"></i> 骑行</div>
+            <div class="interest"><i class="fas fa-paint-brush"></i> 陶艺</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ===== Bottom CTA ===== -->
+      <section class="resume-cta" data-reveal>
+        <h3>Let's <em>make</em><br />something together.</h3>
+        <p>如果你觉得我合适，发封邮件聊聊。</p>
+        <div class="actions">
+          <a href="mailto:704494844@qq.com" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> 704494844@qq.com <span class="arrow">→</span>
+          </a>
+          <a href="#" download class="btn btn-ghost">
+            <i class="fas fa-file-pdf"></i> 下载 PDF 简历
+          </a>
+          <a href="index.html" class="btn btn-ghost">
+            <i class="fas fa-home"></i> 返回主页
+          </a>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <div>© 2025 Haozi · Designed &amp; built by myself · v2.0</div>
+        <a href="index.html">← 返回主页</a>
+      </footer>
+    </main>
+
+    <script src="assets/js/v2-shared.js"></script>
+    <script>
+      // Skill bars fill on scroll
+      const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('in'); skillObserver.unobserve(e.target); }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.skill').forEach((s) => skillObserver.observe(s));
+    </script>
+  </body>
 </html>
