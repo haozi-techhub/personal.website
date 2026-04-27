@@ -185,15 +185,18 @@
   </head>
   <body>
     <header class="nav">
-      <a href="index.html" class="nav-logo">Ha<span>o</span>zi.</a>
-      <nav>
-        <ul class="nav-links">
+      <a href="index.html" class="nav-logo" aria-label="Haozi · 在线">
+        <span class="logo-text">Ha<span>o</span>zi.</span>
+        <span class="logo-status" aria-hidden="true"></span>
+      </a>
+      <div class="nav-main">
+        <ul class="nav-pill">
           <li><a href="index.html">Home</a></li>
           <li><a href="photos.html" class="active">Photos</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="agents.html">Agents</a></li>
           <li class="nav-dropdown">
-            <a href="#" onclick="return false;">Self-media ▾</a>
+            <a href="#" onclick="return false;" aria-haspopup="true">Self-media<span class="chev">▼</span></a>
             <div class="nav-dropdown-menu">
               <a href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc" target="_blank" rel="noopener">📕 小红书</a>
               <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" rel="noopener">🎬 抖音</a>
@@ -202,9 +205,12 @@
               <a href="#" target="_blank" rel="noopener">💬 微信公众号</a>
             </div>
           </li>
-          <li><a href="resume.html" class="nav-cta">Resume →</a></li>
         </ul>
-      </nav>
+        <a href="resume.html" class="nav-cta">
+          <span>Resume</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
     </header>
 
     <main>

@@ -15,11 +15,20 @@
       /* Agents page · dark accent surface */
       body { background: var(--ink); color: var(--paper); }
       body::before { mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(255,255,255,.06) 0%, transparent 100%); background-image: linear-gradient(to right, rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.04) 1px, transparent 1px); }
-      .nav { background: color-mix(in srgb, var(--ink) 80%, transparent); border-bottom-color: rgba(255,255,255,.08); }
-      .nav-logo { color: var(--paper); }
-      .nav-links a { color: var(--paper); }
-      .nav-cta { background: var(--acid); color: var(--ink); }
-      .nav-cta:hover { background: var(--paper); color: var(--ink); }
+      /* Nav overrides on dark surface */
+      .nav { background: color-mix(in srgb, var(--ink) 85%, transparent); border-bottom-color: rgba(255,255,255,.08); }
+      .nav-logo, .nav-logo .logo-text { color: var(--paper); }
+      .nav-pill { background: rgba(255,255,255,.06); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+      .nav-pill > li > a { color: rgba(244,241,234,.6); }
+      .nav-pill > li > a:hover { color: var(--paper); background: rgba(255,255,255,.08); }
+      .nav-pill > li > a.active { background: var(--acid); color: var(--ink); }
+      .nav-cta { background: var(--acid); color: var(--ink); box-shadow: 0 6px 20px rgba(215,255,58,.25); }
+      .nav-cta::before { background: var(--paper); }
+      .nav-cta:hover { color: var(--ink); }
+      .nav-dropdown-menu { background: var(--ink); border-color: rgba(255,255,255,.15); }
+      .nav-dropdown-menu::before { background: var(--ink); border-color: rgba(255,255,255,.15); }
+      .nav-dropdown-menu a { color: var(--paper); }
+      .nav-dropdown-menu a:hover { background: var(--acid); color: var(--ink); }
       .page-hero h1 em { color: var(--acid); }
       .page-hero .lede { color: rgba(244,241,234,.7); }
       .page-hero .crumb { color: rgba(244,241,234,.6); }
@@ -133,15 +142,18 @@
   </head>
   <body>
     <header class="nav">
-      <a href="index.html" class="nav-logo">Ha<span>o</span>zi.</a>
-      <nav>
-        <ul class="nav-links">
+      <a href="index.html" class="nav-logo" aria-label="Haozi · 在线">
+        <span class="logo-text">Ha<span>o</span>zi.</span>
+        <span class="logo-status" aria-hidden="true"></span>
+      </a>
+      <div class="nav-main">
+        <ul class="nav-pill">
           <li><a href="index.html">Home</a></li>
           <li><a href="photos.html">Photos</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="agents.html" class="active">Agents</a></li>
           <li class="nav-dropdown">
-            <a href="#" onclick="return false;">Self-media ▾</a>
+            <a href="#" onclick="return false;" aria-haspopup="true">Self-media<span class="chev">▼</span></a>
             <div class="nav-dropdown-menu">
               <a href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc" target="_blank" rel="noopener">📕 小红书</a>
               <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" rel="noopener">🎬 抖音</a>
@@ -150,9 +162,12 @@
               <a href="#" target="_blank" rel="noopener">💬 微信公众号</a>
             </div>
           </li>
-          <li><a href="resume.html" class="nav-cta">Resume →</a></li>
         </ul>
-      </nav>
+        <a href="resume.html" class="nav-cta">
+          <span>Resume</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
     </header>
 
     <main>
