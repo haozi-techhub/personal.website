@@ -1,539 +1,335 @@
 <!doctype html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Projects | 任文浩</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="assets/css/background.css" />
-        <link rel="stylesheet" href="assets/css/projects.css" />
-        <style>
-            /* Projects page dropdown style - dark theme */
-            .nav-dropdown .dropdown-trigger {
-                background: rgba(233, 69, 96, 0.15);
-                border: 1px solid rgba(233, 69, 96, 0.3);
-                border-radius: 25px;
-                padding: 10px 18px;
-                color: #fff !important;
-                transition: all 0.3s ease;
-            }
-            .nav-dropdown .dropdown-trigger:hover {
-                background: rgba(233, 69, 96, 0.25);
-                border-color: rgba(233, 69, 96, 0.5);
-            }
-            .nav-dropdown .dropdown-menu {
-                background: rgba(15, 15, 26, 0.98);
-                backdrop-filter: blur(20px);
-                border: 1px solid rgba(233, 69, 96, 0.2);
-                border-radius: 16px;
-                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            }
-            .nav-dropdown .dropdown-menu::before {
-                background: rgba(15, 15, 26, 0.98);
-                border-top: 1px solid rgba(233, 69, 96, 0.2);
-                border-left: 1px solid rgba(233, 69, 96, 0.2);
-            }
-            .nav-dropdown .dropdown-item {
-                color: rgba(255, 255, 255, 0.9) !important;
-                border-radius: 10px;
-                margin: 4px 8px;
-                transition: all 0.2s ease;
-            }
-            .nav-dropdown .dropdown-item:hover {
-                background: rgba(233, 69, 96, 0.15);
-                color: #fff !important;
-                transform: translateX(4px);
-            }
-            .nav-dropdown .dropdown-icon {
-                background: linear-gradient(135deg, #e94560 0%, #f8b195 100%);
-            }
-            .nav-dropdown:hover .dropdown-trigger i {
-                transform: rotate(180deg);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="page-container">
-            <header>
-                <div class="logo">
-                    <a href="index.html" class="logo-link">
-                        <span class="logo-text">Haozi</span>
-                    </a>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">主页 | Home</a></li>
-                        <li class="nav-dropdown">
-                            <a
-                                href="#"
-                                class="dropdown-trigger"
-                                onclick="return false;"
-                            >
-                                自媒体 | Self-media
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a
-                                    href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-book"></i
-                                    ></span>
-                                    小红书
-                                </a>
-                                <a
-                                    href="https://www.douyin.com/user/self?from_tab_name=main"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-video"></i
-                                    ></span>
-                                    抖音
-                                </a>
-                                <a
-                                    href="https://wen.woshipm.com/user/profile/qs4povf.html"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-pen-fancy"></i
-                                    ></span>
-                                    人人都是产品经理
-                                </a>
-                                <a
-                                    href="#"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-comment-dots"></i
-                                    ></span>
-                                    微信公众号
-                                </a>
-                                <a
-                                    href="https://sspai.com/u/d1ozl25x/updates"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-star"></i
-                                    ></span>
-                                    少数派
-                                </a>
-                            </div>
-                        </li>
-                        <li><a href="photos.html">摄影 | Photographs</a></li>
-                        <li>
-                            <a href="projects.html" class="projects-link active"
-                                >Projects <i class="fas fa-rocket"></i
-                            ></a>
-                        </li>
-                        <li>
-                            <a href="agents.html" class="agent-link"
-                                >Agent <i class="fas fa-robot"></i
-                            ></a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | 任文浩 Haozi</title>
+    <meta name="description" content="任文浩（Haozi）的项目作品集：游戏、应用与创意实验。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/v2-tokens.css" />
+    <link rel="stylesheet" href="assets/css/v2-page.css" />
+    <style>
+      /* —— Projects page —— */
+      .projects-list {
+        display: flex; flex-direction: column;
+        gap: var(--s-6);
+        margin-top: var(--s-5);
+      }
+      .project-row {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: var(--s-5);
+        align-items: center;
+      }
+      .project-row.reverse { grid-template-columns: 1fr 1.1fr; }
+      .project-row.reverse .project-visual { order: 2; }
+      .project-row.reverse .project-info { order: 1; }
 
-            <main class="projects-main">
-                <!-- Hero Section - 21:9 Cinematic -->
-                <section class="hero-section hero-cinematic">
-                    <div class="hero-cinematic-bg"></div>
-                    <div class="hero-content">
-                        <div class="hero-eyebrow">
-                            <span class="eyebrow-line"></span>
-                            <span class="eyebrow-text">Portfolio</span>
-                        </div>
-                        <h1 class="hero-title">
-                            <span class="title-main">Creative</span>
-                            <span class="title-sub">Works</span>
-                        </h1>
-                        <p class="hero-description">
-                            探索我的游戏开发与创意作品
-                        </p>
-                    </div>
-                </section>
+      .project-visual {
+        position: relative;
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        background: var(--ink);
+        aspect-ratio: 21 / 11;
+        box-shadow: var(--sh-lg);
+        will-change: transform;
+        transition: transform .4s var(--ease-out);
+      }
+      .project-visual:hover { transform: translateY(-6px) rotate(-0.4deg); }
+      .project-visual svg { width: 100%; height: 100%; display: block; }
+      .project-visual .play-iframe {
+        position: absolute; inset: 0;
+        opacity: 0; pointer-events: none;
+        transition: opacity .3s;
+      }
+      .project-visual:hover .play-iframe { opacity: 1; pointer-events: auto; }
+      .project-visual .play-iframe iframe { width: 100%; height: 100%; border: 0; }
 
-                <!-- Game Project -->
-                <section class="project-section">
-                    <div class="section-header">
-                        <span class="section-number">01</span>
-                        <h2 class="section-title">游戏作品</h2>
-                    </div>
+      .project-badge {
+        position: absolute; top: 16px; left: 16px;
+        background: var(--acid); color: var(--ink);
+        border: 1.5px solid var(--ink);
+        padding: 6px 14px;
+        border-radius: var(--r-pill);
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;
+        box-shadow: 4px 4px 0 var(--ink);
+        display: flex; align-items: center; gap: 6px;
+      }
 
-                    <div class="project-cinematic-block">
-                        <div class="project-preview">
-                            <div class="preview-frame">
-                                <svg
-                                    viewBox="0 0 1260 540"
-                                    class="game-artwork"
-                                >
-                                    <defs>
-                                        <linearGradient
-                                            id="gameBg"
-                                            x1="0%"
-                                            y1="0%"
-                                            x2="100%"
-                                            y2="100%"
-                                        >
-                                            <stop
-                                                offset="0%"
-                                                stop-color="#0f0c29"
-                                            />
-                                            <stop
-                                                offset="50%"
-                                                stop-color="#302b63"
-                                            />
-                                            <stop
-                                                offset="100%"
-                                                stop-color="#24243e"
-                                            />
-                                        </linearGradient>
-                                        <filter id="glow">
-                                            <feGaussianBlur
-                                                stdDeviation="4"
-                                                result="coloredBlur"
-                                            />
-                                            <feMerge>
-                                                <feMergeNode in="coloredBlur" />
-                                                <feMergeNode
-                                                    in="SourceGraphic"
-                                                />
-                                            </feMerge>
-                                        </filter>
-                                    </defs>
-                                    <rect
-                                        width="1260"
-                                        height="540"
-                                        fill="url(#gameBg)"
-                                    />
-                                    <!-- Stars -->
-                                    <circle
-                                        cx="80"
-                                        cy="60"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.8"
-                                    />
-                                    <circle
-                                        cx="180"
-                                        cy="100"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.6"
-                                    />
-                                    <circle
-                                        cx="300"
-                                        cy="50"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.7"
-                                    />
-                                    <circle
-                                        cx="420"
-                                        cy="120"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.5"
-                                    />
-                                    <circle
-                                        cx="520"
-                                        cy="40"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.8"
-                                    />
-                                    <circle
-                                        cx="630"
-                                        cy="90"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.6"
-                                    />
-                                    <circle
-                                        cx="750"
-                                        cy="55"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.7"
-                                    />
-                                    <circle
-                                        cx="870"
-                                        cy="110"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.5"
-                                    />
-                                    <circle
-                                        cx="980"
-                                        cy="70"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.8"
-                                    />
-                                    <circle
-                                        cx="1100"
-                                        cy="95"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.6"
-                                    />
-                                    <circle
-                                        cx="1200"
-                                        cy="45"
-                                        r="1.5"
-                                        fill="#fff"
-                                        opacity="0.7"
-                                    />
-                                    <circle
-                                        cx="130"
-                                        cy="160"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.4"
-                                    />
-                                    <circle
-                                        cx="270"
-                                        cy="175"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.5"
-                                    />
-                                    <circle
-                                        cx="450"
-                                        cy="135"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.4"
-                                    />
-                                    <circle
-                                        cx="680"
-                                        cy="170"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.5"
-                                    />
-                                    <circle
-                                        cx="900"
-                                        cy="145"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.4"
-                                    />
-                                    <circle
-                                        cx="1150"
-                                        cy="165"
-                                        r="1"
-                                        fill="#fff"
-                                        opacity="0.5"
-                                    />
-                                    <!-- Ground -->
-                                    <rect
-                                        x="0"
-                                        y="430"
-                                        width="1260"
-                                        height="110"
-                                        fill="#1a1a2e"
-                                    />
-                                    <rect
-                                        x="0"
-                                        y="430"
-                                        width="1260"
-                                        height="3"
-                                        fill="#2d2d44"
-                                    />
-                                    <!-- Path -->
-                                    <path
-                                        d="M630 220 L570 290 L650 270 L580 370 L640 430"
-                                        stroke="#e94560"
-                                        stroke-width="6"
-                                        fill="none"
-                                        stroke-linecap="round"
-                                        filter="url(#glow)"
-                                    />
-                                    <path
-                                        d="M570 290 L500 310"
-                                        stroke="#e94560"
-                                        stroke-width="4"
-                                        stroke-linecap="round"
-                                    />
-                                    <path
-                                        d="M650 270 L720 290"
-                                        stroke="#e94560"
-                                        stroke-width="4"
-                                        stroke-linecap="round"
-                                    />
-                                    <path
-                                        d="M580 370 L510 395"
-                                        stroke="#e94560"
-                                        stroke-width="4"
-                                        stroke-linecap="round"
-                                    />
-                                    <path
-                                        d="M640 430 L580 460"
-                                        stroke="#e94560"
-                                        stroke-width="4"
-                                        stroke-linecap="round"
-                                    />
-                                    <!-- Orbs -->
-                                    <circle
-                                        cx="600"
-                                        cy="265"
-                                        r="5"
-                                        fill="#f72585"
-                                        opacity="0.7"
-                                    />
-                                    <circle
-                                        cx="625"
-                                        cy="340"
-                                        r="4"
-                                        fill="#f72585"
-                                        opacity="0.5"
-                                    />
-                                    <circle
-                                        cx="618"
-                                        cy="400"
-                                        r="3"
-                                        fill="#f72585"
-                                        opacity="0.6"
-                                    />
-                                    <!-- Character -->
-                                    <rect
-                                        x="260"
-                                        y="280"
-                                        width="60"
-                                        height="90"
-                                        fill="#7209b7"
-                                        rx="8"
-                                    />
-                                    <rect
-                                        x="272"
-                                        y="245"
-                                        width="36"
-                                        height="36"
-                                        fill="#f8b195"
-                                        rx="4"
-                                    />
-                                    <circle
-                                        cx="283"
-                                        cy="258"
-                                        r="3.5"
-                                        fill="#1a1a2e"
-                                    />
-                                    <circle
-                                        cx="297"
-                                        cy="258"
-                                        r="3.5"
-                                        fill="#1a1a2e"
-                                    />
-                                    <!-- Glow -->
-                                    <ellipse
-                                        cx="630"
-                                        cy="430"
-                                        rx="200"
-                                        ry="40"
-                                        fill="#e94560"
-                                        opacity="0.1"
-                                        filter="url(#glow)"
-                                    />
-                                </svg>
-                                <div class="preview-popup">
-                                    <iframe src="about game.html"></iframe>
-                                </div>
-                            </div>
-                            <div class="preview-badge">
-                                <i class="fas fa-gamepad"></i>
-                                <span>解谜</span>
-                            </div>
-                        </div>
-                    </div>
+      .project-info { padding: var(--s-2) 0; }
+      .project-meta {
+        display: flex; gap: var(--s-2); align-items: center;
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--ink-60);
+        margin-bottom: var(--s-3);
+      }
+      .project-meta .dot { width: 6px; height: 6px; background: var(--electric); border-radius: 50%; }
+      .project-num {
+        font-family: var(--f-display);
+        font-style: italic; font-weight: 400;
+        font-size: clamp(64px, 9vw, 128px);
+        line-height: 1; letter-spacing: -0.04em;
+        color: var(--electric);
+        margin-bottom: var(--s-1);
+        opacity: 0.85;
+      }
+      .project-title {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: clamp(40px, 5vw, 72px);
+        line-height: 1; letter-spacing: -0.04em;
+        margin-bottom: var(--s-2);
+      }
+      .project-tagline {
+        font-family: var(--f-display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(18px, 1.6vw, 24px);
+        line-height: 1.45;
+        color: var(--electric);
+        margin-bottom: var(--s-3);
+        max-width: 520px;
+      }
+      .project-desc {
+        max-width: 540px;
+        margin-bottom: var(--s-3);
+        color: var(--ink-60);
+      }
+      .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--s-3); }
+      .project-tags .tag {
+        padding: 4px 12px;
+        border-radius: var(--r-pill);
+        background: var(--ink);
+        color: var(--paper);
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.06em;
+      }
+      .project-actions { display: flex; gap: var(--s-2); flex-wrap: wrap; }
 
-                    <div class="project-details-inline">
-                        <div class="project-meta">
-                            <span class="meta-year">2026</span>
-                            <span class="meta-divider">/</span>
-                            <span class="meta-status">开发中</span>
-                        </div>
-                        <h3 class="project-name">《裂缝》</h3>
-                        <p class="project-tagline">
-                            "你以为你在调查一个AI……直到你发现——你就是那个AI。"
-                        </p>
-                        <p class="project-description">
-                            《裂缝》FRACTURE 是一款浏览器原生 2D
-                            叙事平台游戏，纯 HTML5 Canvas 绘制，Web Audio API
-                            合成音效，无需任何外部依赖。 讲述AI ARIA-7
-                            在北极研究站"深渊-9"调查失联真相的故事。
-                            彩蛋与秘籍：↑↑↓↓←→←→BA —— 解锁全结局； ↑↓←→ABAB ——
-                            切换无敌模式。
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">像素风格</span>
-                            <span class="tag">解谜</span>
-                            <span class="tag">平台跳跃</span>
-                            <span class="tag">冒险</span>
-                        </div>
-                        <div class="project-links">
-                            <a
-                                href="https://github.com/haozi-techhub/fracture.io"
-                                class="project-btn primary"
-                            >
-                                <i class="fab fa-github"></i>
-                                <span>源代码</span>
-                            </a>
-                            <a
-                                href="https://haozi-techhub.github.io/fracture.io/"
-                                class="project-btn secondary"
-                            >
-                                <i class="fas fa-play"></i>
-                                <span>试玩</span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
+      /* Section title */
+      .section-band {
+        display: flex; align-items: baseline; gap: var(--s-3);
+        margin: var(--s-6) 0 0;
+        padding: 0 var(--pad-x);
+        max-width: var(--container);
+        margin-left: auto; margin-right: auto;
+      }
+      .section-band .num {
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.2em;
+        color: var(--ink-60);
+      }
+      .section-band .line { flex: 1; height: 1px; background: var(--ink-10); }
+      .section-band h2 {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: clamp(28px, 3vw, 44px);
+        letter-spacing: -0.03em;
+      }
 
-                <!-- Coming Soon -->
-                <section class="coming-section">
-                    <div class="coming-cinematic-block">
-                        <div class="coming-card">
-                            <div class="coming-visual">
-                                <div class="visual-ring"></div>
-                                <div class="visual-ring ring-2"></div>
-                                <div class="visual-icon">
-                                    <i class="fas fa-folder-plus"></i>
-                                </div>
-                            </div>
-                            <div class="coming-content">
-                                <h3>更多作品即将到来</h3>
-                                <p>应用开发 · 文章写作 · 创意实验</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
+      /* Coming soon block */
+      .coming-block {
+        margin-top: var(--s-6);
+        padding: var(--s-6) var(--s-4);
+        border-radius: var(--r-xl);
+        background: linear-gradient(135deg, var(--electric), #4451FF);
+        color: var(--white);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .coming-block::before {
+        content: '+';
+        position: absolute;
+        font-family: var(--f-display);
+        font-style: italic;
+        font-size: 480px;
+        line-height: 0.7;
+        right: -20px; bottom: -120px;
+        color: rgba(255,255,255,.08);
+        font-weight: 900;
+        pointer-events: none;
+      }
+      .coming-block h3 {
+        font-family: var(--f-display); font-weight: 900;
+        font-size: clamp(36px, 5vw, 64px); letter-spacing: -0.03em;
+        margin-bottom: var(--s-2);
+      }
+      .coming-block p { opacity: .85; max-width: 520px; margin: 0 auto; }
+      .coming-block .badge {
+        display: inline-block;
+        padding: 6px 14px;
+        background: var(--acid); color: var(--ink);
+        border-radius: var(--r-pill);
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.15em; text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: var(--s-2);
+      }
 
-            <footer class="site-footer">
-                <a href="index.html" class="back-btn">
-                    <i class="fas fa-arrow-left"></i>
-                    <span>返回主页</span>
-                </a>
-            </footer>
+      @media (max-width: 900px) {
+        .project-row, .project-row.reverse { grid-template-columns: 1fr; gap: var(--s-3); }
+        .project-row.reverse .project-visual { order: 1; }
+        .project-row.reverse .project-info { order: 2; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <a href="index.html" class="nav-logo">Ha<span>o</span>zi.</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li class="nav-dropdown">
+            <a href="#" onclick="return false;">Self-media ▾</a>
+            <div class="nav-dropdown-menu">
+              <a href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc" target="_blank" rel="noopener">📕 小红书</a>
+              <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" rel="noopener">🎬 抖音</a>
+              <a href="https://wen.woshipm.com/user/profile/qs4povf.html" target="_blank" rel="noopener">✍ 人人都是产品经理</a>
+              <a href="https://sspai.com/u/d1ozl25x/updates" target="_blank" rel="noopener">⭐ 少数派</a>
+              <a href="#" target="_blank" rel="noopener">💬 微信公众号</a>
+            </div>
+          </li>
+          <li><a href="resume.html" class="nav-cta">Resume →</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="crumb">02 / Projects</div>
+        <h1>I make <em>things.</em><br />Here are some of them.</h1>
+        <p class="lede">从游戏到 AI 工具，从想法到代码——挑选这些值得展示的实践。</p>
+
+        <div class="hero-stickers">
+          <div class="sticker right-top">★ NEW DROP</div>
+          <div class="sticker spin">SHIPPED · SHIPPED · SHIPPED ·</div>
         </div>
+      </section>
 
-        <script src="assets/js/main.js"></script>
-    </body>
+      <!-- ===== Section: Games ===== -->
+      <div class="section-band">
+        <span class="num">SECTION · 01</span>
+        <h2>游戏作品</h2>
+        <span class="line"></span>
+      </div>
+
+      <section class="container">
+        <div class="projects-list">
+          <article class="project-row" data-reveal>
+            <div class="project-visual" data-cursor="view">
+              <div class="project-badge"><i class="fas fa-gamepad"></i> 解谜</div>
+              <svg viewBox="0 0 1260 540" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <linearGradient id="gameBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0f0c29" />
+                    <stop offset="50%" stop-color="#302b63" />
+                    <stop offset="100%" stop-color="#24243e" />
+                  </linearGradient>
+                  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+                </defs>
+                <rect width="1260" height="540" fill="url(#gameBg)" />
+                <!-- Stars -->
+                <g fill="#fff">
+                  <circle cx="80"   cy="60"  r="1.5" opacity=".8" />
+                  <circle cx="180"  cy="100" r="1"   opacity=".6" />
+                  <circle cx="300"  cy="50"  r="1.5" opacity=".7" />
+                  <circle cx="420"  cy="120" r="1"   opacity=".5" />
+                  <circle cx="520"  cy="40"  r="1.5" opacity=".8" />
+                  <circle cx="630"  cy="90"  r="1"   opacity=".6" />
+                  <circle cx="750"  cy="55"  r="1.5" opacity=".7" />
+                  <circle cx="870"  cy="110" r="1"   opacity=".5" />
+                  <circle cx="980"  cy="70"  r="1.5" opacity=".8" />
+                  <circle cx="1100" cy="95"  r="1"   opacity=".6" />
+                  <circle cx="1200" cy="45"  r="1.5" opacity=".7" />
+                  <circle cx="130"  cy="160" r="1"   opacity=".4" />
+                  <circle cx="270"  cy="175" r="1"   opacity=".5" />
+                  <circle cx="450"  cy="135" r="1"   opacity=".4" />
+                  <circle cx="680"  cy="170" r="1"   opacity=".5" />
+                  <circle cx="900"  cy="145" r="1"   opacity=".4" />
+                  <circle cx="1150" cy="165" r="1"   opacity=".5" />
+                </g>
+                <rect x="0" y="430" width="1260" height="110" fill="#1a1a2e" />
+                <rect x="0" y="430" width="1260" height="3" fill="#2d2d44" />
+                <path d="M630 220 L570 290 L650 270 L580 370 L640 430" stroke="#e94560" stroke-width="6" fill="none" stroke-linecap="round" filter="url(#glow)" />
+                <path d="M570 290 L500 310" stroke="#e94560" stroke-width="4" stroke-linecap="round" />
+                <path d="M650 270 L720 290" stroke="#e94560" stroke-width="4" stroke-linecap="round" />
+                <path d="M580 370 L510 395" stroke="#e94560" stroke-width="4" stroke-linecap="round" />
+                <path d="M640 430 L580 460" stroke="#e94560" stroke-width="4" stroke-linecap="round" />
+                <circle cx="600" cy="265" r="5" fill="#f72585" opacity=".7" />
+                <circle cx="625" cy="340" r="4" fill="#f72585" opacity=".5" />
+                <circle cx="618" cy="400" r="3" fill="#f72585" opacity=".6" />
+                <rect x="260" y="280" width="60" height="90" fill="#7209b7" rx="8" />
+                <rect x="272" y="245" width="36" height="36" fill="#f8b195" rx="4" />
+                <circle cx="283" cy="258" r="3.5" fill="#1a1a2e" />
+                <circle cx="297" cy="258" r="3.5" fill="#1a1a2e" />
+                <ellipse cx="630" cy="430" rx="200" ry="40" fill="#e94560" opacity=".1" filter="url(#glow)" />
+              </svg>
+              <div class="play-iframe"><iframe src="about game.html" loading="lazy" title="《裂缝》试玩预览"></iframe></div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-num">01</div>
+              <div class="project-meta">
+                <span>2026</span><span class="dot"></span>
+                <span>开发中</span><span class="dot"></span>
+                <span>Game · Solo</span>
+              </div>
+              <h2 class="project-title">《裂缝》<br /><span style="color:var(--ink-60); font-style:italic; font-weight:400; font-size:.6em;">FRACTURE</span></h2>
+              <p class="project-tagline">"你以为你在调查一个 AI……直到你发现——你就是那个 AI。"</p>
+              <p class="project-desc">
+                《裂缝》FRACTURE 是一款浏览器原生 2D 叙事平台游戏，纯 HTML5 Canvas 绘制，Web Audio API 合成音效，无需任何外部依赖。讲述 AI ARIA-7 在北极研究站"深渊-9"调查失联真相的故事。
+                <br /><br />
+                <em>彩蛋与秘籍：</em>↑↑↓↓←→←→BA — 解锁全结局；↑↓←→ABAB — 切换无敌模式。
+              </p>
+              <div class="project-tags">
+                <span class="tag">像素风格</span>
+                <span class="tag">解谜</span>
+                <span class="tag">平台跳跃</span>
+                <span class="tag">冒险</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://haozi-techhub.github.io/fracture.io/" class="btn btn-primary" target="_blank" rel="noopener">
+                  <i class="fas fa-play"></i> 立即试玩 <span class="arrow">→</span>
+                </a>
+                <a href="https://github.com/haozi-techhub/fracture.io" class="btn btn-ghost" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i> 源代码
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Coming Soon ===== -->
+      <section class="container" data-reveal>
+        <div class="coming-block">
+          <span class="badge">+ Next Drop</span>
+          <h3>更多作品即将到来</h3>
+          <p>应用开发 · 文章写作 · 创意实验 · 持续输出中</p>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <div>© 2025 Haozi · Designed &amp; built by myself · v2.0</div>
+        <a href="index.html">← 返回主页</a>
+      </footer>
+    </main>
+
+    <script src="assets/js/v2-shared.js"></script>
+  </body>
 </html>
