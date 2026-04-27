@@ -1,142 +1,261 @@
 <!doctype html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>任文浩的个人主页</title>
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        />
-        <link rel="stylesheet" href="assets/css/background.css" />
-        <link rel="stylesheet" href="assets/css/animation-background.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>任文浩 Haozi · AIPM / Designer / Photographer</title>
+    <meta name="description" content="AI 产品经理、设计爱好者、摄影玩家。这里是任文浩（Haozi）的作品、项目与思考。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/v2-tokens.css" />
+    <link rel="stylesheet" href="assets/css/v2-home.css" />
+  </head>
+  <body>
+    <!-- ===== NAV ===== -->
+    <header class="nav">
+      <a href="#hero" class="nav-logo">Ha<span>o</span>zi.</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" data-nav-target="hero">Home</a></li>
+          <li><a href="#photos" data-nav-target="photos">Photos</a></li>
+          <li><a href="#projects" data-nav-target="projects">Projects</a></li>
+          <li><a href="#agents" data-nav-target="agents">Agents</a></li>
+          <li class="nav-dropdown">
+            <a href="#" onclick="return false;">Self-media ▾</a>
+            <div class="nav-dropdown-menu">
+              <a href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc" target="_blank" rel="noopener">📕 小红书</a>
+              <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" rel="noopener">🎬 抖音</a>
+              <a href="https://wen.woshipm.com/user/profile/qs4povf.html" target="_blank" rel="noopener">✍ 人人都是产品经理</a>
+              <a href="https://sspai.com/u/d1ozl25x/updates" target="_blank" rel="noopener">⭐ 少数派</a>
+              <a href="#" target="_blank" rel="noopener">💬 微信公众号</a>
+            </div>
+          </li>
+          <li><a href="resume.html" class="nav-cta">Resume →</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <script src="assets/js/background-animation.js"></script>
-    </head>
-    <body>
-        <div class="page-container">
-            <header>
-                <div class="logo">
-                    <span class="logo-text">Haozi</span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">主页 | Home</a></li>
-                        <li class="nav-dropdown">
-                            <a
-                                href="#"
-                                class="dropdown-trigger"
-                                onclick="return false;"
-                            >
-                                自媒体 | Self-media
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a
-                                    href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-book"></i
-                                    ></span>
-                                    小红书
-                                </a>
-                                <a
-                                    href="https://www.douyin.com/user/self?from_tab_name=main"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-video"></i
-                                    ></span>
-                                    抖音
-                                </a>
-                                <a
-                                    href="https://wen.woshipm.com/user/profile/qs4povf.html"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-pen-fancy"></i
-                                    ></span>
-                                    人人都是产品经理
-                                </a>
-                                <a
-                                    href="#"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-comment-dots"></i
-                                    ></span>
-                                    微信公众号
-                                </a>
-                                <a
-                                    href="https://sspai.com/u/d1ozl25x/updates"
-                                    class="dropdown-item"
-                                    target="_blank"
-                                >
-                                    <span class="dropdown-icon"
-                                        ><i class="fas fa-star"></i
-                                    ></span>
-                                    少数派
-                                </a>
-                            </div>
-                        </li>
-                        <li><a href="photos.html">摄影 | Photographs</a></li>
-                        <li>
-                            <a href="projects.html" class="projects-link"
-                                >Projects <i class="fas fa-rocket"></i
-                            ></a>
-                        </li>
-                        <li>
-                            <a href="agents.html" class="agent-link"
-                                >Agent <i class="fas fa-robot"></i
-                            ></a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+    <!-- ===== PROGRESS RAIL ===== -->
+    <aside class="progress-rail" aria-hidden="true">
+      <button class="progress-dot active" data-target="hero" data-label="Hello"></button>
+      <button class="progress-dot" data-target="photos" data-label="Photos"></button>
+      <button class="progress-dot" data-target="projects" data-label="Projects"></button>
+      <button class="progress-dot" data-target="agents" data-label="Agents"></button>
+      <button class="progress-dot" data-target="resume" data-label="Contact"></button>
+    </aside>
 
-            <main class="main-content">
-                <div class="content-wrapper">
-                    <div class="text-content">
-                        <h1>Hello!</h1>
-                        <h2>我是任文浩</h2>
-                        <div class="intro-text">
-                            一名热爱生活的AI产品经理，社恐ENFJ，能独立喝水吃饭，无聊会玩智能手机和电脑，热爱摄影。
-                        </div>
-                        <p class="intro-text-en">
-                            I'm an AIPM who loves life. I'm an ENFJ with a bit
-                            of social anxiety. I'm passionate about photography.
-                        </p>
-                        <a href="resume.html">
-                            <button class="download-btn">
-                                RESUME <i class="fas fa-download"></i>
-                            </button>
-                        </a>
-                    </div>
-                    <div class="avatar-content">
-                        <img
-                            src="https://images.pexels.com/photos/36558802/pexels-photo-36558802.png?_gl=1*bn9k4n*_ga*NDkyNzAwMzc4LjE3NDM1ODczMTU.*_ga_8JE65Q40S6*czE3NzM0NjQxOTckbzgkZzEkdDE3NzM0NjUyMDEkajI5JGwwJGgw"
-                            alt="个人卡通形象"
-                            class="avatar-image"
-                            onerror="
-                                this.onerror = null;
-                                console.error('图片加载失败:', this.src);
-                                this.src =
-                                    'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23f0f0f0%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22Arial%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22%23999%22%3E图片加载失败%3C/text%3E%3C/svg%3E';
-                            "
-                        />
-                        <div class="avatar-decoration"></div>
-                    </div>
-                </div>
-            </main>
+    <main>
+      <!-- ===== 屏 1 · HERO ===== -->
+      <section class="snap" id="hero">
+        <div class="snap-inner">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <div class="hello-wrap">
+                <h1 class="hello">Hello!</h1>
+                <div class="hello-underline"></div>
+              </div>
+              <div class="hero-name">
+                任文浩<span class="en">Haozi</span>
+              </div>
+              <div class="hero-tagline" data-text="AIPM · DESIGNER · PHOTOGRAPHER">AIPM · DESIGNER · PHOTOGRAPHER</div>
+              <p class="hero-lede">
+                AI 产品经理，业余设计师与摄影师。<br />
+                在工具理性与浪漫主义之间反复横跳。
+              </p>
+              <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                  看看作品 <span class="arrow">→</span>
+                </a>
+                <a href="resume.html" class="btn btn-ghost">
+                  Resume <span class="arrow">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-portrait">
+              <div class="portrait-badge top-left">★ 2025 / NEW</div>
+              <div class="hero-portrait-frame">
+                <img src="photos/hero/portrait-hero.png" alt="任文浩的艺术照 · hello! 拼贴风格" />
+              </div>
+              <div class="portrait-badge bottom-right">Designed by myself</div>
+              <div class="portrait-badge star">
+                <span>OPEN<br />TO<br />WORK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-blob one"></div>
+          <div class="hero-blob two"></div>
+
+          <div class="scroll-hint">
+            <span>Scroll</span>
+            <span class="line"></span>
+            <span>01 / 05</span>
+          </div>
         </div>
+      </section>
 
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/fix-avatar-image.js"></script>
-    </body>
+      <!-- ===== 屏 2 · PHOTOS ===== -->
+      <section class="snap" id="photos">
+        <div class="snap-inner">
+          <div class="section-tag">01 · Photography</div>
+          <h2 class="section-title">用镜头，<em>留住</em>那些偏见。</h2>
+          <p class="section-sub">See the world through my lens — city, portrait, film.</p>
+
+          <div class="photo-grid">
+            <div class="photo-card big" data-tilt>
+              <img src="https://images.unsplash.com/photo-1502899576159-f224dc2349fa?w=1200&q=80" alt="精选摄影 1" />
+              <div class="photo-meta">Featured · 01</div>
+            </div>
+            <div class="photo-card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80" alt="精选摄影 2" />
+              <div class="photo-meta">Nature · 02</div>
+            </div>
+            <div class="photo-card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1511300636408-a63a89df3482?w=800&q=80" alt="精选摄影 3" />
+              <div class="photo-meta">Portrait · 03</div>
+            </div>
+            <div class="photo-card ghost">
+              <span class="plus">+</span>
+              <span>下一组作品位</span>
+            </div>
+            <div class="photo-card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="精选摄影 4" />
+              <div class="photo-meta">Mountain · 04</div>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--s-4); display: flex; justify-content: flex-end;">
+            <a href="photos.html" class="btn btn-ghost">
+              进入摄影完整页 <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 屏 3 · PROJECTS ===== -->
+      <section class="snap" id="projects">
+        <div class="snap-inner">
+          <div class="section-tag">02 · Projects</div>
+          <h2 class="section-title"><em>做</em>过的那些，还在做的。</h2>
+          <p class="section-sub">Things I've built & shipped — and the ones still cooking.</p>
+
+          <div class="project-grid">
+            <article class="project-card accent-blue" data-tilt>
+              <div class="project-no">Project · 01</div>
+              <h3 class="project-title">Project Atlas</h3>
+              <p class="project-desc">让产品经理也能写需求文档的 Agent，从结构化问答到 PRD 自动生成。</p>
+              <div class="project-tags">
+                <span class="project-tag">AI</span>
+                <span class="project-tag">Tooling</span>
+                <span class="project-tag">2025</span>
+              </div>
+              <span class="project-link">查看详情 <span class="arrow">→</span></span>
+            </article>
+
+            <article class="project-card" data-tilt>
+              <div class="project-no">Project · 02</div>
+              <h3 class="project-title">Haozi Web</h3>
+              <p class="project-desc">你正在看的这个站点。零依赖、手写动效、国际大师水准自我挑战。</p>
+              <div class="project-tags">
+                <span class="project-tag">Web</span>
+                <span class="project-tag">Design</span>
+                <span class="project-tag">2025</span>
+              </div>
+              <span class="project-link">查看详情 <span class="arrow">→</span></span>
+            </article>
+
+            <article class="project-card accent-mist" data-tilt>
+              <div class="project-no">Project · 03</div>
+              <h3 class="project-title">Field Notes</h3>
+              <p class="project-desc">关于 AI、产品与设计的田野笔记，散落在各个自媒体平台。</p>
+              <div class="project-tags">
+                <span class="project-tag">Writing</span>
+                <span class="project-tag">Ongoing</span>
+              </div>
+              <span class="project-link">查看详情 <span class="arrow">→</span></span>
+            </article>
+
+            <article class="project-card ghost">
+              <div style="font-size: 48px; line-height: 1;">+</div>
+              <div style="font-family: var(--f-mono); font-size: var(--fs-small); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 12px;">下个项目位</div>
+            </article>
+          </div>
+
+          <div style="margin-top: var(--s-3); display: flex; justify-content: flex-end;">
+            <a href="projects.html" class="btn btn-ghost">
+              查看所有项目 <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 屏 4 · AGENTS ===== -->
+      <section class="snap" id="agents">
+        <div class="snap-inner">
+          <div class="section-tag">03 · Agents</div>
+          <h2 class="section-title">我的 <em>AI</em> 实验田。</h2>
+          <p class="section-sub">My AI experiments — small, opinionated, built for real use.</p>
+
+          <div class="agent-grid">
+            <article class="agent-card" data-tilt>
+              <div class="agent-icon">🧭</div>
+              <h3 class="agent-name">Atlas</h3>
+              <p class="agent-pitch">产品需求文档的结构化陪练。</p>
+              <a href="agents.html" class="agent-link">立即体验 →</a>
+            </article>
+            <article class="agent-card" data-tilt>
+              <div class="agent-icon">🪄</div>
+              <h3 class="agent-name">Muse</h3>
+              <p class="agent-pitch">设计灵感抽屉，从引用到配色一步到位。</p>
+              <a href="agents.html" class="agent-link">立即体验 →</a>
+            </article>
+            <article class="agent-card ghost">
+              <div style="font-size: 48px; line-height: 1;">+</div>
+              <div style="font-family: var(--f-mono); font-size: var(--fs-small); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 12px;">下个 Agent</div>
+            </article>
+          </div>
+
+          <div style="margin-top: var(--s-4); display: flex; justify-content: flex-end;">
+            <a href="agents.html" class="btn" style="background: var(--acid); color: var(--ink);">
+              全部 Agent <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 屏 5 · CONTACT ===== -->
+      <section class="snap" id="resume">
+        <div class="snap-inner">
+          <h2 class="contact-big">Let's <em>make</em><br />something together.</h2>
+          <p class="contact-sub">如果你也在做有意思的事情，不妨发封邮件聊聊。</p>
+
+          <div class="contact-cta">
+            <a href="resume.html" class="btn btn-primary">
+              View Resume <span class="arrow">→</span>
+            </a>
+            <a href="mailto:hello@example.com" class="btn btn-ghost">
+              hello@example.com <span class="arrow">✉</span>
+            </a>
+          </div>
+
+          <div class="socials">
+            <a class="social-icon" data-label="小红书" href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc" target="_blank" rel="noopener">📕</a>
+            <a class="social-icon" data-label="抖音" href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" rel="noopener">🎬</a>
+            <a class="social-icon" data-label="人人都是产品经理" href="https://wen.woshipm.com/user/profile/qs4povf.html" target="_blank" rel="noopener">✍</a>
+            <a class="social-icon" data-label="少数派" href="https://sspai.com/u/d1ozl25x/updates" target="_blank" rel="noopener">⭐</a>
+            <a class="social-icon" data-label="公众号" href="#" target="_blank" rel="noopener">💬</a>
+          </div>
+
+          <div class="footer">© 2025 Haozi · Designed &amp; built by myself · v2.0</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/v2-home.js"></script>
+  </body>
 </html>
