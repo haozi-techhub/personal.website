@@ -52,6 +52,7 @@
       <button class="progress-dot" data-target="projects" data-label="Projects"></button>
       <button class="progress-dot" data-target="agents" data-label="Agents"></button>
       <button class="progress-dot" data-target="resume" data-label="Contact"></button>
+      <button class="progress-dot" data-target="guestbook" data-label="Guestbook"></button>
     </aside>
 
     <main>
@@ -272,8 +273,40 @@
           <div class="footer">© 2025 Haozi · Designed &amp; built by myself · v2.0</div>
         </div>
       </section>
+
+      <!-- ===== 屏 6 · GUESTBOOK ===== -->
+      <section class="snap" id="guestbook">
+        <div class="snap-inner guestbook-inner">
+
+          <div class="section-tag">06 · Guestbook</div>
+          <h2 class="section-title">给我<em>留个言</em>。</h2>
+          <p class="section-sub">路过的朋友，写点什么吧。</p>
+
+          <form class="gb-form" id="gbForm">
+            <div class="gb-form-row">
+              <input class="gb-input" id="gbNickname" type="text" placeholder="你的昵称（必填）" maxlength="30" required />
+              <button class="gb-submit btn btn-primary" type="submit">发送 <span class="arrow">→</span></button>
+            </div>
+            <textarea class="gb-textarea" id="gbContent" placeholder="留下你想说的话（最多 200 字）" maxlength="200" required></textarea>
+            <div class="gb-hint" id="gbHint"></div>
+          </form>
+
+          <div class="gb-list" id="gbList">
+            <div class="gb-loading">加载中...</div>
+          </div>
+
+          <div class="gb-admin" id="gbAdmin" style="display:none">
+            <button class="btn btn-ghost gb-logout" id="gbLogout">退出管理</button>
+          </div>
+          <div class="gb-admin-login" id="gbAdminLogin">
+            <button class="gb-admin-trigger" id="gbAdminTrigger">· · ·</button>
+          </div>
+
+        </div>
+      </section>
     </main>
 
     <script src="assets/js/v2-home.js"></script>
+    <script type="module" src="assets/js/guestbook.js"></script>
   </body>
 </html>
