@@ -290,7 +290,7 @@ vercel --prod --yes
 | 电话 | +86 17732585067 |
 | 小红书 | https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc |
 | 抖音 | https://www.douyin.com/user/self?from_tab_name=main |
-| 人人都是产品经理 | https://wen.woshipm.com/user/profile/qs4povf.html |
+| 人人都是产品经理 | https://www.woshipm.com/u/1577356 |
 | 少数派 | https://sspai.com/u/d1ozl25x/updates |
 | 游戏 FRACTURE | https://haozi-techhub.github.io/fracture.io/ |
 | 游戏 GitHub | https://github.com/haozi-techhub/fracture.io |
