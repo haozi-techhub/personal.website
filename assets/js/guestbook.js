@@ -3,8 +3,8 @@
 // ⚠️  替换下方两个值为你自己的 Supabase 项目信息
 //    Dashboard → Settings → API
 // ============================================================
-const SUPABASE_URL     = 'https://YOUR_PROJECT.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY';
+const SUPABASE_URL     = 'https://znflconpkvndaoqkicuo.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpuZmxjb25wa3ZuZGFvcWtpY3VvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczMjMxOTMsImV4cCI6MjA5Mjg5OTE5M30.Wj9Xpu6BjLSEaonUQqDYNj5_dqy-LsXlLK4w4N0IGmQ';
 
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 
