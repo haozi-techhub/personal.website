@@ -1,0 +1,177 @@
+/* 背景样式 - 现代化精炼版 */
+:root {
+    --bg-primary: #f5f8ff;
+    --bg-gradient-start: #f5f8ff;
+    --bg-gradient-mid: #edf2ff;
+    --bg-gradient-end: #e2ecff;
+}
+
+body {
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
+    position: relative;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-out;
+    background-attachment: fixed;
+}
+
+.page-container {
+    background: transparent;
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 装饰元素 - 右上角圆形 */
+body::before {
+    content: '';
+    position: fixed;
+    top: -150px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.08), rgba(49, 130, 206, 0.06));
+    opacity: 0;
+    z-index: -1;
+    filter: blur(60px);
+    animation: fadeInAndFloat 1.2s ease-out forwards,
+               floatCircle 20s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* 装饰元素 - 左下角波浪形 */
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -140px;
+    left: -140px;
+    width: 480px;
+    height: 480px;
+    background: linear-gradient(45deg, rgba(26, 54, 93, 0.06), rgba(49, 130, 206, 0.05));
+    border-radius: 45% 55% 65% 35% / 45% 55% 55% 45%;
+    opacity: 0;
+    z-index: -1;
+    filter: blur(50px);
+    animation: fadeInAndFloat 1.2s ease-out 0.2s forwards,
+               moveWave 30s ease-in-out infinite,
+               floatWave 12s ease-in-out infinite;
+}
+
+/* 淡入并上浮动画 */
+@keyframes fadeInAndFloat {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+}
+
+/* 波浪动画 - 更平滑 */
+@keyframes moveWave {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        transform: rotate(0deg);
+    }
+    50% {
+        border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+        transform: rotate(2deg);
+    }
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        transform: rotate(0deg);
+    }
+}
+
+/* 圆形浮动动画 - 幅度减小 */
+@keyframes floatCircle {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-12px, 12px) rotate(2deg);
+    }
+    50% {
+        transform: translate(0, 24px) rotate(0deg);
+    }
+    75% {
+        transform: translate(12px, 12px) rotate(-2deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes floatWave {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* 装饰点缀 */
+.decoration-dots {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.decoration-dots::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(26, 54, 93, 0.15);
+    border-radius: 50%;
+    top: 20%;
+    left: 15%;
+    box-shadow:
+        120px 60px 0 -2px rgba(49, 130, 206, 0.12),
+        200px -50px 0 -3px rgba(26, 54, 93, 0.1),
+        -150px 100px 0 -1px rgba(49, 130, 206, 0.08),
+        250px 200px 0 -4px rgba(26, 54, 93, 0.12);
+    opacity: 0;
+    filter: blur(1px);
+    animation: fadeInDots 1.2s ease-out 0.5s forwards,
+               floatDots 12s ease-in-out infinite;
+}
+
+@keyframes fadeInDots {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatDots {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(15px, -15px) scale(1.05);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}

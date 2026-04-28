@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agents | 任文浩 Haozi</title>
+    <meta name="description" content="任文浩（Haozi）创建的智能体作品集：小红书文案、图像描述、英语陪伴等。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/v2-tokens.css" />
+    <link rel="stylesheet" href="assets/css/v2-page.css" />
+    <style>
+      /* Agents page · dark accent surface */
+      body { background: var(--ink); color: var(--paper); }
+      body::before { mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(255,255,255,.06) 0%, transparent 100%); background-image: linear-gradient(to right, rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.04) 1px, transparent 1px); }
+      /* Nav overrides on dark surface */
+      .nav { background: color-mix(in srgb, var(--ink) 85%, transparent); border-bottom-color: rgba(255,255,255,.08); }
+      .nav-logo, .nav-logo .logo-text { color: var(--paper); }
+      .nav-pill { background: rgba(255,255,255,.06); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+      .nav-pill > li > a { color: rgba(244,241,234,.6); }
+      .nav-pill > li > a:hover { color: var(--paper); background: rgba(255,255,255,.08); }
+      .nav-pill > li > a.active { background: var(--acid); color: var(--ink); }
+      .nav-cta { background: var(--acid); color: var(--ink); box-shadow: 0 6px 20px rgba(215,255,58,.25); }
+      .nav-cta::before { background: var(--paper); }
+      .nav-cta:hover { color: var(--ink); }
+      .nav-dropdown-menu { background: var(--ink); border-color: rgba(255,255,255,.15); }
+      .nav-dropdown-menu::before { background: var(--ink); border-color: rgba(255,255,255,.15); }
+      .nav-dropdown-menu a { color: var(--paper); }
+      .nav-dropdown-menu a:hover { background: var(--acid); color: var(--ink); }
+      .page-hero h1 em { color: var(--acid); }
+      .page-hero .lede { color: rgba(244,241,234,.7); }
+      .page-hero .crumb { color: rgba(244,241,234,.6); }
+      .page-hero .crumb::before { background: var(--acid); }
+
+      .agents-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: var(--s-3);
+        margin-top: var(--s-5);
+      }
+      .agent-card {
+        position: relative;
+        padding: var(--s-4);
+        border-radius: var(--r-lg);
+        background: rgba(255,255,255,.03);
+        border: 1px solid rgba(255,255,255,.10);
+        display: flex; flex-direction: column;
+        min-height: 320px;
+        transition: all .35s var(--ease-out);
+        overflow: hidden;
+        will-change: transform;
+      }
+      .agent-card::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(280px circle at var(--mx,50%) var(--my,50%),
+          rgba(215,255,58,.18), transparent 60%);
+        opacity: 0;
+        transition: opacity .3s;
+        pointer-events: none;
+      }
+      .agent-card:hover { border-color: var(--acid); background: rgba(215,255,58,.05); transform: translateY(-4px); }
+      .agent-card:hover::before { opacity: 1; }
+
+      .agent-no {
+        font-family: var(--f-mono); font-size: var(--fs-meta);
+        letter-spacing: 0.2em; opacity: .6; margin-bottom: var(--s-2);
+      }
+      .agent-icon-wrap {
+        width: 64px; height: 64px;
+        background: var(--acid); color: var(--ink);
+        border-radius: var(--r-md);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 28px;
+        margin-bottom: var(--s-2);
+        box-shadow: 4px 4px 0 var(--paper);
+      }
+      .agent-card:hover .agent-icon-wrap { transform: rotate(-6deg); }
+      .agent-name {
+        font-family: var(--f-display);
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
+      .agent-desc { color: rgba(244,241,234,.75); flex: 1; margin-bottom: var(--s-3); }
+      .agent-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: var(--s-3); }
+      .agent-tag {
+        padding: 4px 12px;
+        border-radius: var(--r-pill);
+        background: rgba(255,255,255,.06);
+        font-family: var(--f-mono);
+        font-size: var(--fs-meta);
+        letter-spacing: 0.06em;
+      }
+      .agent-cta {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 10px 18px;
+        border-radius: var(--r-pill);
+        background: var(--acid); color: var(--ink);
+        font-weight: 700; font-size: var(--fs-small);
+        align-self: flex-start;
+        transition: all .2s var(--ease-io);
+      }
+      .agent-cta:hover { background: var(--paper); transform: translateX(4px); }
+
+      .agent-card.ghost {
+        background: transparent;
+        border: 2px dashed rgba(255,255,255,.18);
+        align-items: center; justify-content: center;
+        text-align: center;
+        color: rgba(244,241,234,.5);
+      }
+      .agent-card.ghost .plus { font-size: 56px; line-height: 1; margin-bottom: 12px; }
+      .agent-card.ghost:hover { border-color: var(--acid); color: var(--acid); }
+
+      .request-block {
+        margin-top: var(--s-6);
+        padding: var(--s-5) var(--s-4);
+        border-radius: var(--r-lg);
+        background: linear-gradient(135deg, rgba(215,255,58,.08), rgba(42,55,255,.08));
+        border: 1px solid rgba(255,255,255,.08);
+        text-align: center;
+      }
+      .request-block h3 {
+        font-family: var(--f-display); font-weight: 900;
+        font-size: clamp(28px, 3vw, 40px); margin-bottom: var(--s-2);
+      }
+      .request-block p { color: rgba(244,241,234,.7); margin-bottom: var(--s-3); }
+      .request-block strong { color: var(--acid); font-family: var(--f-mono); letter-spacing: 0.05em; }
+
+      .page-footer { color: rgba(244,241,234,.55); border-top-color: rgba(255,255,255,.08); }
+      .page-footer a:hover { color: var(--acid); }
+
+      /* Cursor inverse on dark */
+      .cursor-dot { background: var(--acid) !important; }
+      .cursor-ring { border-color: var(--acid) !important; }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <a href="index.html" class="nav-logo" aria-label="Haozi · 在线">
+        <span class="logo-text">Ha<span>o</span>zi.</span>
+        <span class="logo-status" aria-hidden="true"></span>
+      </a>
+      <div class="nav-main">
+        <ul class="nav-pill">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="agents.html" class="active">Agents</a></li>
+          <li class="nav-dropdown">
+            <a href="#" onclick="return false;" aria-haspopup="true">Self-media<span class="chev">▼</span></a>
+            <div class="nav-dropdown-menu">
+              <a href="https://www.xiaohongshu.com/user/profile/61a64f71000000001000fbcc" target="_blank" rel="noopener">📕 小红书</a>
+              <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" rel="noopener">🎬 抖音</a>
+              <a href="https://wen.woshipm.com/user/profile/qs4povf.html" target="_blank" rel="noopener">✍ 人人都是产品经理</a>
+              <a href="https://sspai.com/u/d1ozl25x/updates" target="_blank" rel="noopener">⭐ 少数派</a>
+              <a href="#" target="_blank" rel="noopener">💬 微信公众号</a>
+            </div>
+          </li>
+        </ul>
+        <a href="resume.html" class="nav-cta">
+          <span>Resume</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="crumb">03 / Agents</div>
+        <h1>我创造的 <em>智能体</em><br />为你而工作。</h1>
+        <p class="lede">My AI agents — 围绕真实场景的小工具。点开就能用，无需安装。</p>
+
+        <div class="hero-stickers">
+          <div class="sticker right-top">★ 3 ACTIVE</div>
+          <div class="sticker spin">POWERED BY · AI ·</div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="agents-grid">
+          <!-- Agent 1 -->
+          <article class="agent-card" data-tilt data-reveal>
+            <div class="agent-no">Agent · 01</div>
+            <div class="agent-icon-wrap"><i class="fas fa-pen-fancy"></i></div>
+            <h2 class="agent-name">小红书文案<br />生成智能体</h2>
+            <p class="agent-desc">专业的小红书文案创作助手，帮你生成吸引人的标题和内容，提升笔记曝光率。</p>
+            <div class="agent-tags">
+              <span class="agent-tag">文案</span>
+              <span class="agent-tag">创意</span>
+              <span class="agent-tag">营销</span>
+            </div>
+            <a class="agent-cta" href="https://www.coze.cn/s/GL30suXXwO0/" target="_blank" rel="noopener">
+              使用智能体 <i class="fas fa-external-link-alt"></i>
+            </a>
+          </article>
+
+          <!-- Agent 2 -->
+          <article class="agent-card" data-tilt data-reveal>
+            <div class="agent-no">Agent · 02</div>
+            <div class="agent-icon-wrap"><i class="fas fa-image"></i></div>
+            <h2 class="agent-name">图像描述<br />大师智能体</h2>
+            <p class="agent-desc">专业的图像分析和描述工具，能够精准解读图片内容，生成详细、生动的文字描述。</p>
+            <div class="agent-tags">
+              <span class="agent-tag">图像分析</span>
+              <span class="agent-tag">描述</span>
+              <span class="agent-tag">创意</span>
+            </div>
+            <a class="agent-cta" href="https://www.coze.cn/store/agent/7479690901959770164?bot_id=true" target="_blank" rel="noopener">
+              使用智能体 <i class="fas fa-external-link-alt"></i>
+            </a>
+          </article>
+
+          <!-- Agent 3 -->
+          <article class="agent-card" data-tilt data-reveal>
+            <div class="agent-no">Agent · 03</div>
+            <div class="agent-icon-wrap"><i class="fas fa-language"></i></div>
+            <h2 class="agent-name">英语陪伴<br />智能体</h2>
+            <p class="agent-desc">你的专属英语学习伙伴，提供日常对话练习、语法指导和词汇学习，让英语学习更有趣更高效。</p>
+            <div class="agent-tags">
+              <span class="agent-tag">英语</span>
+              <span class="agent-tag">对话</span>
+              <span class="agent-tag">学习</span>
+            </div>
+            <a class="agent-cta" href="https://www.coze.cn/s/QWoP2uKy8OQ/" target="_blank" rel="noopener">
+              使用智能体 <i class="fas fa-external-link-alt"></i>
+            </a>
+          </article>
+
+          <!-- Ghost · Coming Soon -->
+          <article class="agent-card ghost" data-reveal>
+            <div class="plus">+</div>
+            <div style="font-family: var(--f-mono); font-size: var(--fs-small); letter-spacing: 0.12em; text-transform: uppercase;">下一个智能体位<br /><span style="opacity:.6">Coming soon</span></div>
+          </article>
+        </div>
+
+        <div class="request-block" data-reveal>
+          <h3>有想法？想定制？</h3>
+          <p>如果你有特定需求的智能体，欢迎联系我聊聊。</p>
+          <p>📞 <strong>17732585067</strong></p>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <div>© 2025 Haozi · Designed &amp; built by myself · v2.0</div>
+        <a href="index.html">← 返回主页</a>
+      </footer>
+    </main>
+
+    <script src="assets/js/v2-shared.js"></script>
+  </body>
+</html>
